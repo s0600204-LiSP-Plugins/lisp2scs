@@ -90,6 +90,11 @@ class Lisp2Scs(Plugin):
         # Get used cue types
         cuetypes = {cue.__class__.__name__ for cue in self.app.layout.cues()}
 
+        for cuetype in cuetypes:
+            # Check we have an interpreters for each cue type
+            if cuetype not in self._interpreters:
+                logger.warning(f"No registered interpreter for Cues of type {cuetype}")
+
         # init interpreters to be used
         # run interpreters
         # prompt for location
