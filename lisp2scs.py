@@ -94,8 +94,12 @@ class Lisp2Scs(Plugin):
             # Check we have an interpreters for each cue type
             if cuetype not in self._interpreters:
                 logger.warning(f"No registered interpreter for Cues of type {cuetype}")
+                continue
 
-        # init interpreters to be used
+            # And if we do, initialise an instance of it, if needed
+            if isinstance(self._interpreters[cuetype], type):
+                self._interpreters[cuetype] = self._interpreters[cuetype]()
+
         # run interpreters
         # prompt for location
         # write file
