@@ -87,9 +87,9 @@ class Lisp2Scs(Plugin):
         self.import_action.setText(translate("Lisp2Scs", "Show Cue Systems"))
 
     def export_showfile(self):
-        pass
-        # acquire show file
-        # check cue types, and make sure we have the required interpreters
+        # Get used cue types
+        cuetypes = {cue.__class__.__name__ for cue in self.app.layout.cues()}
+
         # init interpreters to be used
         # run interpreters
         # prompt for location
