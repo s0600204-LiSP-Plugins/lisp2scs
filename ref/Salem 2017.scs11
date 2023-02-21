@@ -1,0 +1,4286 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Production>
+   <Head>
+      <Title>Salem 2017</Title>
+      <ProdId>16B035EF</ProdId>
+      <Version>11.4.0.3</Version>
+      <Build>20150728</Build>
+      <PRLogicalDev0>Front</PRLogicalDev0>
+      <PRNumChans0>2</PRNumChans0>
+      <PRAutoIncludeDev0>1</PRAutoIncludeDev0>
+      <DfltDBLevel0>-3.0</DfltDBLevel0>
+      <PreviewDevice>Front</PreviewDevice>
+      <PRVidAudLogicalDev0>Default</PRVidAudLogicalDev0>
+      <DfltVidAudDBLevel0>-3.0</DfltVidAudDBLevel0>
+      <PRCtrlSendLogicalDev0>Midi</PRCtrlSendLogicalDev0>
+      <PRCtrlSendDevType0>MIDIOut</PRCtrlSendDevType0>
+      <PRCSDevice>
+         <PRCSLogicalDev>Midi</PRCSLogicalDev>
+         <PRCSDevType>MIDIOut</PRCSDevType>
+      </PRCSDevice>
+      <PRCCDevice>
+         <PRCCDevType>MIDIIn</PRCCDevType>
+         <PRCCMidiCtrlMethod>Custom</PRCCMidiCtrlMethod>
+         <PRCCMidiChannel>16</PRCCMidiChannel>
+         <PRCCMidiCommand>
+            <PRCCMidiCmdType>Go</PRCCMidiCmdType>
+            <PRCCMidiCmd>12</PRCCMidiCmd>
+            <PRCCMidiCC>1</PRCCMidiCC>
+            <PRCCMidiVV>0</PRCCMidiVV>
+         </PRCCMidiCommand>
+         <PRCCMidiCommand>
+            <PRCCMidiCmdType>StopAll</PRCCMidiCmdType>
+            <PRCCMidiCmd>12</PRCCMidiCmd>
+            <PRCCMidiCC>2</PRCCMidiCC>
+            <PRCCMidiVV>0</PRCCMidiVV>
+         </PRCCMidiCommand>
+         <PRCCMidiCommand>
+            <PRCCMidiCmdType>GoBack</PRCCMidiCmdType>
+            <PRCCMidiCmd>12</PRCCMidiCmd>
+            <PRCCMidiCC>3</PRCCMidiCC>
+            <PRCCMidiVV>0</PRCCMidiVV>
+         </PRCCMidiCommand>
+         <PRCCMidiCommand>
+            <PRCCMidiCmdType>GoNext</PRCCMidiCmdType>
+            <PRCCMidiCmd>12</PRCCMidiCmd>
+            <PRCCMidiCC>4</PRCCMidiCC>
+            <PRCCMidiVV>0</PRCCMidiVV>
+         </PRCCMidiCommand>
+      </PRCCDevice>
+      <EnableMidiCue>1</EnableMidiCue>
+      <GridClickAction>Ignore</GridClickAction>
+      <FocusPoint>NextManual</FocusPoint>
+   </Head>
+   <Cue>
+      <CueId>M1</CueId>
+      <Description>Preset</Description>
+      <PageNo>-</PageNo>
+      <WhenReqd>Top of Show</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Mute Mics</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 20 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 21 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 22 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 28 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 29 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2a 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2b 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0600</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0601</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0602</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0603</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0604</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0605</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0606</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0607</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Names</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2D  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX1</CueId>
+      <Description>Preshow Announcment</Description>
+      <PageNo>12</PageNo>
+      <WhenReqd>H/L to half</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>BLT GENERIC</SubDescription>
+         <AudioFile>
+            <FileName>$(Cue)\BLT GENERIC Annoucement.wav</FileName>
+            <StartAt>1007</StartAt>
+            <EndAt>17846</EndAt>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-18.0</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M2</CueId>
+      <Description>Prologue</Description>
+      <PageNo>12</PageNo>
+      <WhenReqd>Start of Prologue</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240BB06 40</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  53616d75656c  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 20 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2c BB6240BB06 41</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  4d57617272656e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 42</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  54686f6d6173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4e6f796573  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  486174686f726e65  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  5361726168  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 47  BB63 28 BB6240BB06 47  BB63 29 BB6240BB06 47  BB63 2a BB6240BB06 47  BB63 2b BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4769726c73  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 0F 9B 28 0F 9B 29 0F 9B 2a 0F 9B 2b 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M3</CueId>
+      <Description>Act 1 Scene 1</Description>
+      <PageNo>16</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2c BB6240BB06 01</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 02</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 03</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 04</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 06</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 07  BB63 28 BB6240BB06 07  BB63 29 BB6240BB06 07  BB63 2a BB6240BB06 07  BB63 2b BB6240BB06 07</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 7F  9B 28 7F  9B 29 7F  9B 2a 7F  9B 2b 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M4</CueId>
+      <Description>Act 1 Scene 2</Description>
+      <PageNo>17</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240BB06 41</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  456c697a6162657468  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 21 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240BB06 42</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  546974756261  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 22 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4265747479  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  4162696761696c  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 28 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  54686f6d6173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4a6f6e617468616e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M5</CueId>
+      <Description>Act 1 Scene 3/4</Description>
+      <PageNo>21</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 03</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240BB06 04</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 28 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 06</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240BB06 07</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M6</CueId>
+      <Description>Act 1 Scene 5</Description>
+      <PageNo>23</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  54686f6d6173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  4a6f6e617468616e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2e BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  446f72636173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M7</CueId>
+      <Description>Act 1 Scene 7</Description>
+      <PageNo>28</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2e BB6240BB06 07  BB63 2f BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  41486f626273  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 7F  9B 2f 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M8</CueId>
+      <Description>Act 1 Scene 9</Description>
+      <PageNo>36</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240BB06 01</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  2d  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 03</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240BB06 04</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2f BB6240BB06 07  BB63 21 BB6240BB06 47  BB63 27 BB6240BB06 47  BB63 28 BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  46616d696c79  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F  9B 27 0F  9B 28 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M9</CueId>
+      <Description>Act 2 Scene 1</Description>
+      <PageNo>38</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240BB06 41</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  456c697a6162657468  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4265747479  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  4162696761696c  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240BB06 45</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  416e6e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 29 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  5361726168  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2e BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240BB06 07  BB63 27 BB6240BB06 07  BB63 28 BB6240BB06 07</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  446f72636173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M10</CueId>
+      <Description>Act 2 Scene 3</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 06  BB63 2a BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  4d65726379  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F  9B 2a 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2e BB6240BB06 07  BB63 2b BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4d617279  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 7F  9B 2b 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3</CueId>
+      <Description>Fire Breaks Out</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...were burning...&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Fire Sound Effect</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Fire Sound Effect.mp3</FileName>
+            <FadeInTime>1578</FadeInTime>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-28.6</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>FadeIn</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.1</CueId>
+      <Description>Crowd panics</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...gunshots and screams...&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Crowd panic sound effect</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Crowd panic sound effect.mp3</FileName>
+            <FadeInTime>578</FadeInTime>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-45.5</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>FadeIn</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.2</CueId>
+      <Description>Rifle Musket Firing</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>(auto)</WhenReqd>
+      <ActivationMethod>auto</ActivationMethod>
+      <AutoActivateCue>FX3.1</AutoActivateCue>
+      <AutoActivatePosn>start</AutoActivatePosn>
+      <AutoActivateTime>0</AutoActivateTime>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Rifle Musket Fire FX</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Rifle Musket Fire FX.mp3</FileName>
+            <StartAt>2178</StartAt>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-29.2</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.3</CueId>
+      <Description>Babe crying</Description>
+      <DefDes>1</DefDes>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...babe in arms...&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Babe crying</SubDescription>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Baby Crying Sounds  SOUND EFFECT.mp3</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-37.6</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.4</CueId>
+      <Description>Rifle Musket Firing, again</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...fired upon her...&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Rifle Musket Fire FX</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Rifle Musket Fire FX.mp3</FileName>
+            <StartAt>4895</StartAt>
+            <EndAt>5703</EndAt>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-13.6</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.5</CueId>
+      <Description>Fade out &quot;Babe crying&quot;</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>(auto)</WhenReqd>
+      <ActivationMethod>auto</ActivationMethod>
+      <AutoActivateCue>FX3.4</AutoActivateCue>
+      <AutoActivatePosn>start</AutoActivatePosn>
+      <AutoActivateTime>1000</AutoActivateTime>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Fade out Baby Crying Sounds  SOUND EFFECT</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>fadeout</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>FX3.3</SFRCue0>
+         <SFRTimeOverride>20</SFRTimeOverride>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.6</CueId>
+      <Description>Mother Crying</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...began to weep...&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>Woman Crying and Sobbing Sound Effect</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Effects\Act 2 Scene 3\Woman Crying and Sobbing Sound Effect.mp3</FileName>
+            <StartAt>24891</StartAt>
+            <EndAt>33930</EndAt>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-41.0</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX3.7</CueId>
+      <Description>Fade out all</Description>
+      <PageNo>43</PageNo>
+      <WhenReqd>MERCY: &quot;...with fear.&quot;</WhenReqd>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Fade out Rifle Musket Fire FX</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>fadeout</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>FX3.2</SFRCue0>
+         <SFRAction1>fadeout</SFRAction1>
+         <SFRCueType1>sel</SFRCueType1>
+         <SFRCue1>FX3.1</SFRCue1>
+         <SFRAction2>fadeout</SFRAction2>
+         <SFRCueType2>sel</SFRCueType2>
+         <SFRCue2>FX3</SFRCue2>
+         <SFRAction3>fadeout</SFRAction3>
+         <SFRCueType3>sel</SFRCueType3>
+         <SFRCue3>FX3.6</SFRCue3>
+         <SFRTimeOverride>5000</SFRTimeOverride>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M11</CueId>
+      <Description>Act 2 Scene 5, girls merge</Description>
+      <PageNo>54</PageNo>
+      <WhenReqd>SAMUEL: &quot;They are an abomination!&quot;</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240BB06 04</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2d  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240BB06 05</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  2d  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2a BB6240BB06 06</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2D  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240BB06 47  BB63 29 BB6240BB06 47  BB63 2a BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4769726c73  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+
+   <Cue>
+      <CueId>M11.5</CueId>
+      <Description>Act 2 Scene 6</Description>
+      <PageNo></PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 44  9b 23 0f</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  54686f6d6173  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+		  <SubType>M</SubType>
+         <SubDescription>Assign to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240BB06 45  9b 24 0f</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  4a6f6e617468616e  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 46  BB63 26 BB6240BB06 46  BB63 2c BB6240BB06 46  BB63 2d BB6240BB06 46  BB63 2e BB6240BB06 46  BB63 2f BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  43617374  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9b 25 0f  9b 26 0f  9b 2c 0f  9b 2d 0f  9b 2e 0f  9b 2f 0f</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+
+   <Cue>
+      <CueId>M12</CueId>
+      <Description>Interval</Description>
+      <PageNo>62</PageNo>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Mute Mics</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 20 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 21 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 22 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 28 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 29 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2a 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2b 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0600</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0601</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0602</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0603</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0604</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0605</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0606</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0607</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Names</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2D  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M13</CueId>
+      <Description>Act 3 Scene 1</Description>
+      <PageNo>63</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240BB06 40  BB63 23 BB6240BB06 40  BB63 24 BB6240BB06 40</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  4d656e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 20 0F  9B 23 0F  9B 24 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2c BB6240BB06 41</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  4d57617272656e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240BB06 42</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  436f7277696e  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 21 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4e6f796573  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  486174686f726e65  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  5361726168  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 47  BB63 28 BB6240BB06 47  BB63 29 BB6240BB06 47  BB63 2a BB6240BB06 47  BB63 2b BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4769726c73  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 0F  9B 28 0F  9B 29 0F  9B 2a 0F  9B 2b 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M14</CueId>
+      <Description>Act 3 Scene 1, Girls Split</Description>
+      <PageNo>66</PageNo>
+      <WhenReqd>SAMUEL: &quot;You have heard [...] upon them all.&quot;</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 03  BB63 27 BB6240BB06 43</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4265747479  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 04  BB63 28 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  4162696761696c  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240BB06 45</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  416e6e  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 06  BB63 2a BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  4d65726379  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 07  BB63 28 BB6240BB06 07  BB63 29 BB6240BB06 07  BB63 2a BB6240BB06 07</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4d617279  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M15</CueId>
+      <Description>Act 3 Scene 1, return to lawyers</Description>
+      <PageNo>67</PageNo>
+      <WhenReqd>MARY WARREN: &quot;And that same fire...&quot;</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 43  BB63 27 BB6240BB06 03</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  4e6f796573  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 0F  9B 27 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 44  BB63 28 BB6240BB06 04</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  486174686f726e65  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 0F  9B 28 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240BB06 05</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 29 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2a BB6240BB06 06</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2a 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2b BB6240BB06 07</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2d  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2b 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+
+   <Cue>
+      <CueId>M15.5</CueId>
+      <Description>Act 3 Scene 2</Description>
+      <PageNo></PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240BB06 00  BB63 24 BB6240BB06 00</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  53616d75656c  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F  9B 24 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+
+   <Cue>
+      <CueId>M16</CueId>
+      <Description>Act 3 Scene 3</Description>
+      <PageNo>71</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2f BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  41486f626273  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M17</CueId>
+      <Description>Act 3 Scene 4</Description>
+      <PageNo>74</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2f BB6240BB06 07  BB63 27 BB6240BB06 47  BB63 28 BB6240BB06 47  BB63 29 BB6240BB06 47  BB63 2a BB6240BB06 47  BB63 2b BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  4769726c73  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F  9B 27 0F  9B 28 0F  9B 29 0F  9B 2a 0F  9B 2b 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M18</CueId>
+      <Description>Act 3 Scene 5</Description>
+      <PageNo>77</PageNo>
+      <WhenReqd>Top of Scene</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240BB06 03</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240BB06 04  BB63 23 BB6240BB06 44</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  54686f6d6173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F  9B 23 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2d BB6240BB06 46</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  5361726168  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Assign to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240BB06 07  BB63 28 BB6240BB06 07  BB63 29 BB6240BB06 07  BB63 2a BB6240BB06 07  BB63 2b BB6240BB06 07  BB63  2E BB6240BB06 47</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  446f72636173  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F  9B 27 7F  9B 28 7F  9B 29 7F  9B 2a 7F  9B 2b 7F  9B 2E 0F</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX5</CueId>
+      <Description>Our Father, part 1</Description>
+      <PageNo>85</PageNo>
+      <WhenReqd>Just before lights up at start of Epilogue</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>DR0000_0096.mp3</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Salem\Our Father part 1.mp3</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-22.6</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>FX6</CueId>
+      <Description>Our Father, part 2</Description>
+      <PageNo>85</PageNo>
+      <WhenReqd>MARY WARREN: &quot;...but dissemble.&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>DR0000_0096.mp3</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\Salem\Our Father part 2.mp3</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-22.0</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>M19</CueId>
+      <Description>End of Show</Description>
+      <PageNo>85</PageNo>
+      <WhenReqd>With Applause</WhenReqd>
+      <Sub>
+         <SubType>M</SubType>
+         <SubDescription>Mute Mics</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 20 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 21 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 22 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 23 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 24 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 25 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 26 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 27 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 28 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 29 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2a 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2b 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2c 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2d 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2e 7F</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>9B 2f 7F</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 1</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0600</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0600</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 2</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0601</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0601</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 3</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0602</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0602</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 4</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0603</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0603</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 5</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0604</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0604</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 6</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0605</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0605</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 7</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0606</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0606</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Assigns to DCA 8</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 20 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 21 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 22 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 23 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 24 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 25 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 26 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 27 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 28 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 29 BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2A BB6240 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2B BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2C BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2D BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2E BB2640 BB0607</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>BB63 2F BB2640 BB0607</MIDIData>
+         </ControlMessage>
+      </Sub>
+      <Sub>
+         <SubType>M</SubType>
+         <RelStartMode>ae_prev_sub</RelStartMode>
+         <RelStartTime>0</RelStartTime>
+         <SubDescription>Reset Names</SubDescription>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  10  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  11  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  12  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  13  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  14  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  15  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  16  2D  F7</MIDIData>
+         </ControlMessage>
+         <ControlMessage>
+            <CMLogicalDev>Midi</CMLogicalDev>
+            <MSMsgType>FREE</MSMsgType>
+            <MIDIData>F000001A501001000B03  17  2D  F7</MIDIData>
+         </ControlMessage>
+      </Sub>
+   </Cue>
+   <Files>
+      <File>
+         <FileName>$(Cue)\BLT GENERIC Annoucement.wav</FileName>
+         <FileModified>2016-10-10 19:58:56</FileModified>
+         <FileSize>7695702</FileSize>
+         <FileType>WAV 48000 Hz, 32 bits, stereo</FileType>
+         <FileTitle>BLT GENERIC Annoucement</FileTitle>
+         <FileDuration>20000</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Effects\Act 2 Scene 3\Fire Sound Effect.mp3</FileName>
+         <FileModified>2017-02-18 15:21:02</FileModified>
+         <FileSize>3400027</FileSize>
+         <FileType>MP3 44100 Hz, 192 kbps, stereo</FileType>
+         <FileTitle>Fire Sound Effect</FileTitle>
+         <FileDuration>141650</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Effects\Act 2 Scene 3\Crowd panic sound effect.mp3</FileName>
+         <FileModified>2017-02-18 15:24:06</FileModified>
+         <FileSize>3270250</FileSize>
+         <FileType>MP3 44100 Hz, 192 kbps, stereo</FileType>
+         <FileTitle>Crowd panic sound effect</FileTitle>
+         <FileDuration>136243</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Effects\Act 2 Scene 3\Rifle Musket Fire FX.mp3</FileName>
+         <FileModified>2017-01-23 16:30:42</FileModified>
+         <FileSize>872209</FileSize>
+         <FileType>MP3 44100 Hz, 192 kbps, stereo</FileType>
+         <FileTitle>Rifle Musket Fire FX</FileTitle>
+         <FileDuration>36324</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Effects\Act 2 Scene 3\Baby Crying Sounds  SOUND EFFECT.mp3</FileName>
+         <FileModified>2017-02-18 15:24:42</FileModified>
+         <FileSize>2408836</FileSize>
+         <FileType>MP3 44100 Hz, 192 kbps, stereo</FileType>
+         <FileTitle>Baby Crying Sounds  SOUND EFFECT</FileTitle>
+         <FileDuration>100350</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Effects\Act 2 Scene 3\Woman Crying and Sobbing Sound Effect.mp3</FileName>
+         <FileModified>2017-02-18 15:26:28</FileModified>
+         <FileSize>1262792</FileSize>
+         <FileType>MP3 44100 Hz, 192 kbps, stereo</FileType>
+         <FileTitle>Woman Crying and Sobbing Sound Effect</FileTitle>
+         <FileDuration>52599</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Salem\Our Father part 1.mp3</FileName>
+         <FileModified>2017-03-22 14:10:50</FileModified>
+         <FileSize>1147359</FileSize>
+         <FileType>MP3 44100 Hz, 128 kbps, stereo</FileType>
+         <FileTitle>DR0000_0096.mp3</FileTitle>
+         <FileDuration>71643</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\Salem\Our Father part 2.mp3</FileName>
+         <FileModified>2017-03-22 14:12:42</FileModified>
+         <FileSize>414676</FileSize>
+         <FileType>MP3 44100 Hz, 128 kbps, stereo</FileType>
+         <FileTitle>DR0000_0096.mp3</FileTitle>
+         <FileDuration>25856</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+   </Files>
+   <FileSaveInfo>
+      <_CueFile_>C:\Users\user\Desktop\Salem\Salem 2017.scs11</_CueFile_>
+      <_Saved_>2017/03/30 17:21:50</_Saved_>
+      <_SCS_Version_>11.4.0.3</_SCS_Version_>
+      <_SCS_Build_>2015/07/28 13:17</_SCS_Build_>
+   </FileSaveInfo>
+</Production>

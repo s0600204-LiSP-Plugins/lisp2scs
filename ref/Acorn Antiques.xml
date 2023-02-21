@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Production>
+   <Head>
+      <Title>Acorn Antiques</Title>
+      <Version>11.2.3</Version>
+      <PRLogicalDev0>Front</PRLogicalDev0>
+      <PRNumChans0>2</PRNumChans0>
+      <DfltDBLevel0>-3.0</DfltDBLevel0>
+      <PreviewDevice>Front</PreviewDevice>
+      <PRVidAudLogicalDev0>Default</PRVidAudLogicalDev0>
+      <DfltVidAudDBLevel0>-3.0</DfltVidAudDBLevel0>
+      <EnableMidiCue>1</EnableMidiCue>
+      <FocusPoint>NextManual</FocusPoint>
+   </Head>
+   <Cue>
+      <CueId>Q1</CueId>
+      <Description>p9 - Cat amongst the pigeons</Description>
+      <WhenReqd>POSTIE: &quot;...amongst the pigeons&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>9_cat-n-pigeons</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\9_cat-n-pigeons.wav</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>0.0</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q2</CueId>
+      <Description>p10 - Telephone</Description>
+      <WhenReqd>[BABS puts down letter and parcel]</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>phonering_jims</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\phonering_jims.WAV</FileName>
+            <StartAt>881</StartAt>
+            <Loop>1</Loop>
+            <LoopStart>880</LoopStart>
+            <LoopEnd>3820</LoopEnd>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-14.8</DBLevel0>
+            <Pan0>1000</Pan0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q3</CueId>
+      <Description>p10 - Belated Stop</Description>
+      <WhenReqd>[it carries on ringing for half a ring]</WhenReqd>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Stop Telephone</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>stop</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>Q2</SFRCue0>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q4</CueId>
+      <Description>p10 - Text message</Description>
+      <WhenReqd>[They text busily, then stare at her]</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>10_textmsg_beep</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\10_textmsg_beep.mp3</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>0.0</DBLevel0>
+            <Pan0>1000</Pan0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q5</CueId>
+      <Description>p53 - Ringtone - Cuckoo Waltz</Description>
+      <WhenReqd>HUGH: &quot;...to us Miss Babs&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>accordian_jims</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\accordian_jims.WAV</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-15.0</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q5.5</CueId>
+      <Description>p53 - Stop Ringtone</Description>
+      <WhenReqd>Almost immediate</WhenReqd>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Stop p53 - Ringtone -Cuckoo Waltz</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>stop</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>Q5</SFRCue0>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q6</CueId>
+      <Description>p60 - Ringtone - Girl with the Flaxen Hair</Description>
+      <WhenReqd>BERTA: &quot;...sad piece of news&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>goldenhair_jims</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\goldenhair_jims.WAV</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>0.0</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q6.5</CueId>
+      <Description>p60 - Stop Ringtone</Description>
+      <WhenReqd>Almost immediate</WhenReqd>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Stop p60 - Ringtone - Girl with the Flaxen Hair</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>stop</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>Q6</SFRCue0>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q7</CueId>
+      <Description>p61 - Ringtone - Daisy Daisy</Description>
+      <WhenReqd>CLIFFORD: &quot;...move the leopard&quot;</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>daisydaisy_jims</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\daisydaisy_jims.WAV</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-12.7</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q7.5</CueId>
+      <Description>p61 - Stop Ringtone</Description>
+      <WhenReqd>Almost immediate</WhenReqd>
+      <Sub>
+         <SubType>S</SubType>
+         <SubDescription>Stop p61 - Ringtone - Daisy Daisy</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <SFRAction0>stop</SFRAction0>
+         <SFRCueType0>sel</SFRCueType0>
+         <SFRCue0>Q7</SFRCue0>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q8</CueId>
+      <Description>p97 - Train Station</Description>
+      <WhenReqd>[Lights up downstage]</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>97_train-whistle</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\97_train-whistle.wav</FileName>
+            <EndAt>2303</EndAt>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-3.0</DBLevel0>
+         </AudioFile>
+      </Sub>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>97_hiss-loop</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\97_hiss-loop.wav</FileName>
+            <EndAt>42906</EndAt>
+            <FadeInTime>500</FadeInTime>
+            <FadeOutTime>1000</FadeOutTime>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-7.6</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q9</CueId>
+      <Description>p97 - HUGH&apos;s phone text</Description>
+      <WhenReqd>[HUGH&apos;s phone goes]</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>97_textmsg_(roll)</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\97_textmsg_(roll).flac</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-12.3</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q10</CueId>
+      <Description>p111 - Dance Finish</Description>
+      <WhenReqd>[MRS O withdraws her head]</WhenReqd>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>end_i will survive - hush hush</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\acorn\end_i will survive - hush hush.ogg</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-3.0</DBLevel0>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Files>
+      <File>
+         <FileName>$(Cue)\acorn\9_cat-n-pigeons.wav</FileName>
+         <FileModified>2015-11-05 17:38:32</FileModified>
+         <FileSize>794078</FileSize>
+         <FileType>WAV 44100 Hz, 24 bits, stereo</FileType>
+         <FileTitle>9_cat-n-pigeons</FileTitle>
+         <FileDuration>3001</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>8AAAABBBBBBAABBBA5BBBBCCBB3BBBBBCBB2CCCCCCDCDDDCDDEDDDDCDCCCEDDDEEEEGGEDFGGEFFGEEFGEGFGFIIGFHHIGGGJHIIKJJIKJIJLJJHLKJILLMMLLMLKKKJMMLKOOKJKLLKNNJIMNLLLLMMLLPNONRPQPTSQPPQONKKNNLLOMIILKIJLLIIIJKLMKJKMLHILJLLKIGGJIJIIHHHLKIIKJIHKJKJJIGGJIHIHGHHIIGHJIHHIGIIGGHHGFHHEFGFHHEEIHDDIHFFGFFGGGFFFFEFGG2FFGGEEEFDDGFEEGF2EFEDGFEEGFDEFEDEEEDEFEDEEDFFGFFGJNHPGGIFFGGFFFFEEEFEEDEDEDDCEEFFDDEEEDDDFDFEDEFEGIFIDDCCDDDCCCDDDDDCCDDD2CCCCCCBCDDCDCCCDBCCCDCDCCCCCBCBB2BBBBBCBCBBBBCBCA8BBBBBBBCBBBBBCCCBBBBDCDCCBBB2BBBB2CBCB7BBBBABAB4BBBB2BABBDBDCCDCDBBBBCHCHCBCB3BBBBBCBC3BBBBBBBA10BBBBABAB2BBBBABBBBBBBGLGLCCCBBBBBBABABBBBBDBDBBBBBBBC7BBBBBABBBBAB7BBBBBBBABABAABAB5BBBBBABABBBBABABBBBB2BABA2BBBBBABAABAB3BBBB2ABAB9BBBBAAAABABABBBB2ABAB2BBBBABABBBBBBABAABABBBBB2BABABBBB2BABA3BBBB2ABAB3BBBB2ABABBABA2BBBBBABA3AAAAABABBBBB2ABABDDDDABABBBBB2ABABAAAABABAAAAABBBBBABACCCCCBCBBABA3BBBBAAAA5ABABCCCCAAAA2BBBBBABA2AAAABABA4AAAABBBB3AAAAABAB4AAAABABACECEBCBCBABABBBB8AAAA2BBBB17AAAABABA4AAAAABAB233AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\97_hiss-loop.wav</FileName>
+         <FileModified>2015-11-16 18:09:44</FileModified>
+         <FileSize>8109328</FileSize>
+         <FileType>WAV 44100 Hz, 16 bits, stereo</FileType>
+         <FileTitle>97_hiss-loop</FileTitle>
+         <FileDuration>45971</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>2AAAACCCCDCCCCCCCCCBBCDBC3CCCCCCBC2CCBBCCCB2CCBCCBBBBCBBCBBB2CCBBCBBB2CCBBDBCCCDBB2CCBB2CCCB2CCBBCBBBBCBCDCCCCDCCDCBBCCBBFFDEDDCDCCBBCDBCCCCCCCCBDDBCCCBBCCCCBCBBCCCBCCBBCCCCCCCBCBBBCCBC4CCBBCDCCCCBCCCCCCDCCDCBBCCBCCDCBCCBCCDCCCCCC4CCBBCCCC2CCBCCCBBCCCBCCBBDCBCCCCCCCBCCCBBCBBBCBCCFCCEEFFCDDCCCCCBCCCCCCCBDDCBDFDDFHFFFFDEEEDEDDDECDCCCCBBDCCDDDCCCECBDCCDEEDECDCCCCCBCCBBCCCCCCBCCCCBCCBCCDBBCCBBCBBBCCBBCCBCCCBBCCCBCCCCCCBB2CCCCCCCBDCCBCDBBBCCBCCCBCCBB2CCCC2DDCDDDDDEEEEECCEDDBBCCDCDCDBCCBBCCCBCCBCCCCBCCBCCCCC2CCBBCCCCBCCBCCCBDCCCCDBCCCCCCCBBDDCCDDCBCDBCCCCCCCBBCDBBDCBCCCBBCCCBCCBBCCBCCBCCCDBCCCCCCCBDCCBBCCCCCDDCDCCC2DDCDCDCCDCCCDDCDDDDCCCBCCDCBDCBCCCBCDCCCCCCCCCBCCBCCBCBBCCBBCDBBCDCBCCCCCCBCCBCBCCBCCCBBCCCBCCBBBCBBBBBB3CCBBCBBBCCBBCCBCCBBCCCCCCBCBCCBBBCBBCBBBBCCBCBCCBCBBCCCBCCBCCCCCCCCBDDCC2CCCC2CCCBDDCCCCBBCCBC3CCBBCCCBCCCCCBCCCCCCDDCCDDDC4CCCCCCCBCCDBCCBCCCCB3CCBBCCCCCCBBCCCBCCBBCCCCCCBBBBCBCCBBBCBCCDCCCCCCCBBC2CCBB2CCCCCCBBCCCCCCCBBCBCCCCBCCBCCBCCCCCCBCCCCCCBBCBBCCBCCCCBCCBBBCBBCCBCCCCBCCBBDDDDCCCECCBCCCBBCCCB2CCBBBCBBCCBCCCCBCCBCDCCBCCBCCCBBCCBC2CCCBCCBBCCCCCCCBCCCCCCCBCCBBCCCB3CCBBCDBBCCCC2CCBB2CCCBCCBBCCCB2CCBBBCBBDCBCCCBBCBCCBCBB2CCBCCBBBCCBBCCCB2CCBBCBBBCCBBCCCB2CCBBCCCCCBBBCCBBCCBC2CCBBCDCCDDCCDCCC2CCCCCCCBCCBCCCCCDCCCCDCC2CCCCDCCBDDCCCCBBCCCCCCBBDCCBCCCBCCCC2CCBC3CCCCCDBBCCCBCCBCCCCBDCCCCCCBCCBBCBBBCCCCDCCCDCBBCCCCDDCCCDCCDCCCCCBCCCCBCDBCCCCCCCBCBCBBCCCBCCBBCCCBDCBBCCCBCCCCCCBCCDCBCCCCCCBC3CCCCDDCC2CCCCCCBCCCBBCCBCCCBBCDBBCCCBCDCCDDBCCCBBCCBDCCBB3CCCCCCBBCDCC2CCBC2CCBBCCCBCCBC2CCCCCECCCCCBCCBC5CCBBCCCBCCBBCCBCCCCB6CCCC2CCBCCCCCCCBC2CCCCCCBCCCBBCDCCDDCCCCBC2CCCBCDCCEDCCDCCCDFCCDCCCCCCCCCCBCCCCCCBCCCCBBCCC3CCCCCCCBCCBCCCCB2CCBB2CCBCCBCCCCBCCCCBBCCCCCCCDDCDIGGGEDCDDCCCCCCBCCBCCCBBCDBCCCCCDCCC6CCCCCCBBCCCCCCCBCCBC3CCCC2CCBB2CCCCCCCBCCCCDECCCCCBCCBCCCCCCCCBDDDEDDCCCECCEDCDDDCC2CCCCDCCDDDCCDCCCCCBBCDCC3CCCCCCBCCCCBCCCC2DCCCDCCBCCCCCCBB3CCCCCCBC3CCCCCDCC2CCCCCCBCCCCCCDCBCCBCDCBCDCCCCCCCEDCC2CCCCDDCCEFEDEDDEEDDCEGDEFFEEEEDCDDDDFEDDDFDEDDBCCCCCSEDCEDCDFEFECDDDEECDEDCCHFCEEEEDEEDDEEDCEDDDDFDDDDDCDECDDDCCIGCDDDCCCCCC2CDCC2DDCCEDCDEDFD5AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\97_train-whistle.wav</FileName>
+         <FileModified>2015-11-05 18:30:58</FileModified>
+         <FileSize>12163970</FileSize>
+         <FileType>WAV 44100 Hz, 24 bits, stereo</FileType>
+         <FileTitle>97_train-whistle</FileTitle>
+         <FileDuration>45971</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>4AAAABBABEDEEFEFFEEFFFFEFHHDD2GGEEKLMLKMIILMIILMIJMMJILNKJEFEDBCCB2BBBB578AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\end_i will survive - hush hush.ogg</FileName>
+         <FileModified>2015-11-04 02:47:44</FileModified>
+         <FileSize>2500866</FileSize>
+         <FileType>OGG 44100 Hz, stereo</FileType>
+         <FileTitle>end_i will survive - hush hush</FileTitle>
+         <FileDuration>167351</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>AAAALJILHGGGDDCCDDDDIGIHKJKKJJJJKIJJJIJHDCEDKLKLKJJKJKIJLKLMIIJJDCCC2GIGIKKLKIIKJHIGIIJJKJJJJHIIJIIJIIGIHKJKJJIKIKIKIIGIIDDDCHGIGHGHHJJIJLLKLHJIJKIKIHGHGJIIIIIJJIHKIHHFGGGGGJIJHHIIJJJJIHIIIPNOOLLLMLKLKSPQPOMNONOONQTQPQRSRPPQQQQRPRRSSRRTSRSTSTTSTSTTTRRTSPQQPRRQQSRRSSPRPRPQPSPSSSQRPRRPQQRRPTRRSQRRPRPRQQSQPRQQPQQRQRQSSRRQQPSRQQPRPQRRRRSQSSPSQQQRSRQQRSTSSTRRRRSSSQRQSQRRRXSRSTSTRSPSRURRQQPQOQPQQRQSRTVTTRQSSQRPQRQQRQSQQQQQPQRRRTTTSQRQRVRTTPQSSRQSUQRSSSTTTTWVXRUVVRQTSNMNMUSTRRRSQQTSSRSSSOPQPQRRRPQRRQORQRQRQRPQQQQRRVSWUPPQPQSRQORPQRQRURRRQOQPQTQRRRQPORQRRSRTTORQRQQQQPPPQRRTSRQQRQPQQRSTTRQPQRQRSQRRROOOQRRRRQOQNRRSRQQSTQRRRRQQQQRNPQQSRSSRRSRSTRSRSRRRPSRSWRRSQQQQPQRRVTTQPSSSRRSRTQQRRQQSSQRRSQRRQPSQQOOPNTRSRQOPMPRQQUTVROPPPQQPPXVTWRQSUPSOQQOQPQSSRRPPQRTPQTRYSROPOQQSTTQQPTQRTRRTVRRRRSTTURSSROTSPTWVVTTSTSUUTRSSTQRQPTRSQQRPPSRUSQQQRSQRSRQSTRRSQSQRQTSTW2SRSRRRSQRRRQTTVTTSSTSSZURQTUSTTVRTTSRPTQRRRQOPPRSSSSQPSQQRQPVSWRQRPQRQRRSSSRSSRSQRQRQOPPVSWSSSRQPQRTUSRRTQSQPSRSSRTRQQQQQTQTRPRSTRTTRRSSPPQQWSUUROPPQROSSVSSPRQRUTWSPQPRRRTSQQSRQPQOTRSRQTSSQRSRUTUTTSTUSQTTRQRPQRPRRSTRWRSSSRSRQPRSRRSTSSSSSTSSVWVVRRVVRQRTPQPRTSTSRTQSRTUTQPQQQRSPPOQNRPSSQRRRSPRQQPQRPOQPVTTUPTPPQQRPRRRRSQQPQQRQPPNORQRQQQTQQPPQSSTRPPRRRSSQQQSSQPQPRQRSQOPORRVTRQQQPQRRRQSQRRQRQQQQRRUTPQOPQQSSSQQPRPRSQQRSSQQQSXSSSSTTRRRRRRSSRQRQRQRPQRQRRSRVUSRRSSTSSRRSQQPQQQRSRRRTOQPPQORPRQQPVQSSPPRPNPMOTTVTPOPRQQPQXYVXPSQOPROQQRTQSTQQRSPPPOONXTYRSRQPSPQQRSRRRQOQRSRUSSUSSRSRQRSRQSUSSSUWRURSSSTSTUTRQOOORRSQTTTSPRRTQPQTPQRQSRTTRQSRVQRQTSSUQRRSRSTSRQSRRRQRVVTUTTUTUSVUWTVTRQTTSTTRRQTQQRSQRQQRQQRRPQRRNNOOVTVQRRRQQRQSSTURRSRQQQQRSVUTQRQRRRSQPOQRTVSSSSRSSQQQSTSROOOPQRRURQUUSSSTQQSQPPPQURTTURRTTPRRTUTSRRSQTRTRVTWTRQQRRQTRQRQQTPRSVVXWSUTUSQTTROOOUSSRRRSQRSSTQRQPWSRSSTRUQPTTRRSTRQUTTTSRTWVWRQUUONPQPRORSTSTRTSSTVUTRPRQRSSQPOPMRPSSRRRQQPRPQRRSQOQPTTUUQSQRQPRPQRSRQPQQQRSQSRSRQPPPQQQQPPPPRSSSQQQQOQPQQQSSQQQRRORQSRVSOPPQQRRRPPRQQSQQSQRQPPQPSQRRPPRQQSSSRPQQPQPORRRQQQQQTSSTSRSTQQQQRRTSQPRRSQRQQQSWSTSPUSTRTSTSRQSRQQSTRRQPPSRTPPNQQOPOTTTWONMNPRPQUSUSRRRSPQQQQPPOZUUVQSPQQRPNSRSRQPOPQSPQTTTTRRVRRQQQRPQOSRRSRSRUSRSTTRTURRSSOQOPTTTUSRSTRSSTTQQPSRSSSQRPPPQPTSTSPPQQRRRSSSQSRQSQURSQQQPPTSTV2RRSRRRQQTTTTSSTVSTVVSSUXTTUURSTSVUUSSRRQQQRQSTSTPPRPQQQRSRUSQQQPRRRQOTPQRTTPSSSRQPPPVRVUQQPPQSSPSRRSRQRRRTSSRRQQSQRQQRRTPPPRRRUTSSQSRPTPVTUVSQQQQSPRSOSSRSSRSRUSSRRSWUVURRRQQPRRRSSTRRSSQQRSPPQPQOPPSQRRRPQQRSRRRRRSQRSSRQRQRPRQQQRRPQQRPQRPRQSQQQQPKMKMBBBB3AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\10_textmsg_beep.mp3</FileName>
+         <FileModified>2011-03-01 13:37:24</FileModified>
+         <FileSize>38034</FileSize>
+         <FileType>MP3 44100 Hz, 129 kbps, stereo</FileType>
+         <FileTitle>10_textmsg_beep</FileTitle>
+         <FileDuration>2365</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>72AAAABBBCDDEE2DDEFDEEF3DEFF16DDFF27CDFF2CDFG2DDFGCDEEBCBB17BBBBBBAAABBAABBBDDEFDEEFDDEFDEEFDEFF8DDFFDDFG8DDFF31CDFFCDFGCDFFCCEEBCCB15BBBB3BBBAABAAABABAAAB4AABBAABA2AAAA3BBBBAABAAAAB59AAAAABBAAAAABBABBBBA116AAAABBBBDDEE5DDEF2DDFFDDEF12DDFF31CDFFDDFF2CDFFCCEF2BCCB15BBBBBBBABBBBABBABBBBCDEE3DDEF17DDFF6CDFF3CDEFCDFFCDEF23CDFFCCFF2BCCC16BBBBBBBABBAAABAAAAAA4AABB22AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\97_textmsg_(roll).flac</FileName>
+         <FileModified>2015-11-09 18:12:42</FileModified>
+         <FileSize>334193</FileSize>
+         <FileType>FLAC 48000 Hz, 24 bits, stereo</FileType>
+         <FileTitle>97_textmsg_(roll)</FileTitle>
+         <FileDuration>1939</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>83AAAAABABBBBBCDCDGIHIGIGIHIHIIIIJIJJKJJJKJJJJJJKJ3JJJJ4JIJIJHJHIHIHHGIHFFFFEEFEEDEDCDDDDCDCDCEDECFDFCFDFCGDFDGDGDHE2GEHF5GFHGFFGGEEFFDDEECDDDIHIHFGFGEFEEDEEECDEEDCEEFDGEFEHFHFIGHGIGHGJGIHJHIIJHHIJHHIIHGHHHFGGGFGGFEFEEDFEDDEDDEEEDFEEDGEFE2IGIG2IGHG2HGHGHHHGHHHHGHHH2GGHHFGGHFFGGEFFFDEEFCDDCDEDDEDEDEEGD2GEHFGEGEFEFEEEEEDCED2CDDDDDDDDCEEDDEEDDFEDDEE2DDFE2DDEEDDDEDCDDCCCDCCCCBCBBBBBBBBCC4BBBCBBBB5BBCCAACCBACCBBCCBBBCBBBBBCBB2CCBBCCCB2CCCC2BCCC6BBCC3BBBC3BBBBBCBB15BBBBBBAB9BBBBBBBABAABBAAABABA2AABA9AABBAABA6AAAA2AABAAABB7BBBBABBB5AAAABAAA6AAAA2AABA299AAAA</ViewString>
+         </ViewData>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\accordian_jims.WAV</FileName>
+         <FileModified>2015-11-16 17:56:06</FileModified>
+         <FileSize>4052012</FileSize>
+         <FileType>WAV 44100 Hz, 16 bits, stereo</FileType>
+         <FileTitle>accordian_jims</FileTitle>
+         <FileDuration>22970</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\goldenhair_jims.WAV</FileName>
+         <FileModified>2015-11-16 18:06:22</FileModified>
+         <FileSize>6332588</FileSize>
+         <FileType>WAV 44100 Hz, 16 bits, stereo</FileType>
+         <FileTitle>goldenhair_jims</FileTitle>
+         <FileDuration>35899</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\daisydaisy_jims.WAV</FileName>
+         <FileModified>2015-11-16 17:53:48</FileModified>
+         <FileSize>5332140</FileSize>
+         <FileType>WAV 44100 Hz, 16 bits, stereo</FileType>
+         <FileTitle>daisydaisy_jims</FileTitle>
+         <FileDuration>30227</FileDuration>
+         <FileChannels>2</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\acorn\phonering_jims.WAV</FileName>
+         <FileModified>2009-06-12 12:00:00</FileModified>
+         <FileSize>724608</FileSize>
+         <FileType>WAV 44100 Hz, 16 bits, stereo</FileType>
+         <FileTitle>phonering_jims</FileTitle>
+         <FileDuration>4105</FileDuration>
+         <FileChannels>2</FileChannels>
+         <ViewData>
+            <ViewCode>B</ViewCode>
+            <ViewString>164AAAAQRQROPOPPOPOPQPPPOOO3SSSSSRRRPPOOSMSMOSOSORNQ2SSSSSSRSSSSSSSRSSSSSSRSQSRSRRSRS36SSSSSSRSQQQQSSSSSSSR34SSSSSSSR6SSSSSRSRSSSSSSRSSQSQSSSSSSRSSRSR8SSSSSRSR31SSSSSSRS2SSSSSQRP2SSSSRSRSSSSSSRRQ2SSSSSQRQMMMMNNNMOLNLLMLMLMKLKNKNNNMMLLLKLKLKMNLNPLPLLLLLLPLOMMMMMKLKKKKKLLLLKKKKKJKJLMKLLLLLLJKJJKIK2KKKKHHHHIHHHIJHJGHGHGHGGGFGF2FGFGHGGGGGGGHHGHIIHIHGGGIGIGIIII2HJHIIHIHIIIIHHHHGIGHGGGGHGHGGGGGGFGFGGGGFGFG3GGGGHFGFFGFGGHGGGFGFFGFGFFFFFFEFFEFEEEEEFFFFEEEEFFFFFEFEFFFFGGGGGFFFGGGF3GGGGGFFFGGGGFGFFFFFFFFFE4EEEEEDED4EEEEEFEFFFFE4EEEEEEED2DEDD2DDDDEEEEDEDDEEEEEEED2EEEEDEDE3DDDDDDCD8CCCCCDCDDCCCDDDDCDCDDDDDDCCC5CCCCCBCB2BBBBCCCBBBBB7CCCCBBBBCCCC13BBBBBCBB39BBBBBAAA7AAAABBAABBBBABABBBAA65AAAA</ViewString>
+         </ViewData>
+      </File>
+   </Files>
+   <FileSaveInfo>
+      <_CueFile_>C:\Users\BLT FX Department\Desktop\Acorn Antiques\Acorn Antiques.scs11</_CueFile_>
+      <_Saved_>2015/11/16 22:36:54</_Saved_>
+      <_SCS_Version_>11.2.3</_SCS_Version_>
+      <_SCS_Build_>2013/08/27 17:03</_SCS_Build_>
+   </FileSaveInfo>
+</Production>

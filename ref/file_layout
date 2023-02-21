@@ -1,0 +1,168 @@
+showfile-to-device maps:
+%home%\AppData\Roaming\ShowCueSystem\DevMaps
+	{filename}_{Production/Head/ProdID}
+
+
+
+doctype - <?xml version="1.0" encoding="UTF-8"?>
+
+Production - root
+
+	Head
+
+		Title - string
+		ProdId - hashcode; (exists @ 11.4.0.3, 11.4.1.1; not @ 11.2.3)
+		Version - string; version of SCS used
+		Build - date (yyyymmdd); (exists @ 11.4.0.3, 11.4.1.1; not @ 11.2.3)
+
+		PRLogicalDev{x} - string
+		PRNumChans{x} - integer
+		PRAutoIncludeDev{x} - boolean integer; (exists @ 11.4.0.3, 11.4.1.1; not @ 11.2.3)
+		DfltDBLevel{x} - float; can be empty
+
+		PreviewDevice - string
+		PRVidAudLogicalDev0 - string
+		DfltVidAudDBLevel0 - float
+
+		LabelsUCase - boolean integer; (exists @ 11.4.1.1; not @ 11.2.3, 11.4.0.3); possibly optional
+
+		PRCtrlSendLogicalDev0 - optional; string
+		PRCtrlSendDevType0 - optional; string ["MIDIOut"]
+
+		PRCSDevice - optional
+			PRCSLogicalDev - string
+			PRCSDevType - string ["MIDIOut"]
+
+		PRCCDevice - optional
+			PRCCDevType - string ["MIDIIn"]
+			PRCCMidiCtrlMethod - string ["Custom", "PC127"]
+			PRCCMidiChannel - integer (1->16)
+
+			PRCCMidiCommand - multiple
+				PRCCMidiCmdType - string ["Go", "StopAll", "GoBack", "GoNext"]
+				PRCCMidiCmd - integer (speculation - [12=ProgramChange])
+				PRCCMidiCC - integer
+				PRCCMidiVV - integer
+
+		PRLTDevice		optional
+			PRLTLogicalDev		req; string; user definable name of lighting controller
+			PRLTDevType			req; string; ["DMXOut"]
+
+		EnableMidiCue - boolean integer
+		GridClickAction - optional; string ["Ignore"]
+		FocusPoint - string ["NextManual"]
+
+
+	Cue - multiple
+
+		CueId - required
+		Description - required
+		PageNo - optional
+		WhenReqd - optional
+
+		ActivationMethod - optional; ["auto"]
+		AutoActivateCue - optional, poss. req. if ActivationMethod=="auto"; string; CueId
+		AutoActivatePosn - optional, poss. req. if ActivationMethod=="auto"; string; ["start"]
+		AutoActivateTime - optional, poss. req. if ActivationMethod=="auto"; integer_milliseconds
+
+		Sub - multiple, at least one
+			SubType - required; ["M"=Midi, "F"=AudioFile, "S"=FadeOutAndOrStop, "L"=LevelChange, "K"=LightingControl]
+			SubDescription
+			DefSubDes - optional; integer;
+			RelStartMode - optional; ["ae_prev_sub", "as_cue"]
+			RelStartTime - optional; integer_milliseconds
+
+			## if SubType == "F"
+			AudioFile
+				FileName - string; relational path to file
+				FadeInTime - optional; integer_milliseconds;
+				FadeOutTime - optional; integer_milliseconds;
+				StartAt - optional; integer_milliseconds;
+				EndAt - optional; integer_milliseconds;
+				Loop - optional; integer
+				LoopStart - optional; integer_milliseconds
+				LoopEnd - optional; integer_milliseconds
+				LogicalDev{x} - string; device name
+				DBLevel{x} - float_volume
+
+				Pan{x} - optional; integer (exists @ 11.2.3)
+
+				## The following exists on every AudioFile subcue @ 11.4.0.3, 11.4.1.1, but not @ 11.2.3
+				LvlPtLvlSelA - ["LvlIndiv"]
+				LvlPtPanSelA - ["PanUseAudDev"]
+				LvlPt - multiple
+					LvlPtType - ["FadeIn", "End"]
+					LvlPtItem - multiple
+						LvlPtItemLogicalDev - string; device name
+						LvlPtItemRelDBLevel - float_volume
+
+			## if SubType == "M"
+			ControlMessage - multiple permitted, max. 16 (any more cause program error and close on file read)
+				CMLogicalDev
+				MSMsgType - ["FREE", "PC127"=Program Change 0-127, "PC128"=Program Change 1-128, "CC"=Control Change, "ON"=Note On, "OFF"=Note Off, "MSC"=Midi Show Control]
+
+				## if MsMsgType == "FREE"
+				MIDIData - hexcode
+
+				## if MsMsgType == "PC127" || "PC128"
+				MSChannel - Channel
+				MSParam1 - Program
+
+				## if MsMsgType == "CC" || "ON" || "OFF"
+				MSChannel - Channel
+				MSParam1 - Control
+				MSParam2 - New Value
+
+				## if MsMsgType == "MSC"
+				MSChannel - Device ID
+				MSParam1 - Device Type [1=Lighting, 16=Sound, 96=Pyro, ...]
+				MSParam2 - Action [1=Go, 2=Stop, 7=Fire, ...]
+
+				## if MsMsgType == "MSC"; MSParam2 == 1 || 2 ("Go", "Stop")
+				MSQNumber - required; Cue Number
+				MSQList - optional
+				MSQPath - optional
+
+				## if MsMsgType == "MSC"; and MSParam2 == 7 ("Fire")
+				MSMacro - Macro Num
+
+			## if SubType == "S"
+			SFRAction{n} - ["fadeout", "stop"]
+			SFRCueType{n} - string ["sel"]
+			SFRCue{n} - string; cueId
+			SFRTimeOverride - integer_seconds !! or milliseconds, can't remember
+
+			## if SubType == "L"
+			LCCue - string; CueId
+			LCSubNo - integer
+			LCSameLevel - boolean integer
+			LCSameTime - boolean integer
+			LCReqsDBLevel{x} - float_volume
+			LSTime{x} - integer_milliseconds
+
+			## if SubType == "K"
+			LTLogicalDev	user definable name of lighting controller
+			LTDMXItemStr	multiple permitted, max. eight (any more are ignored/truncated)
+
+	Files - Single
+
+		File - Multiple
+
+			FileName - string; relational path to file on disc
+			FileModified - date (yyyy-mm-dd hh:mm:ss)
+			FileSize - integer
+			FileType - string (filetype frequency "Hz," bitdepth/rate ["bits", "kbps"]"," ["mono", "stereo"])
+			FileTitle - string
+			FileDuration - integer
+			FileChannels - integer
+
+			## @ 11.2.3, and does not appear on all File instances
+			ViewData
+				ViewCode - ["B"]
+				ViewString - string; very-long length of upper-case alphanumerics; speculation - base36 encoded representation of the wave form
+
+	FileSaveInfo - Single
+		_CueFile_ - string; absolute path to showfile on disc
+		_Saved_ - date (yyyy/mm/dd hh:mm:ss)
+		_SCS_Version_ - string
+		_SCS_Build_ - date (yyyy/mm/dd hh:mm)

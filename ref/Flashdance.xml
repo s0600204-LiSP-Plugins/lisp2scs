@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Production>
+   <Head>
+      <Title>BAOS Flashdance</Title>
+      <ProdId>158A3EA0</ProdId>
+      <Version>11.4.1.1</Version>
+      <Build>20151026</Build>
+      <PRLogicalDev0>Front</PRLogicalDev0>
+      <PRNumChans0>2</PRNumChans0>
+      <PRAutoIncludeDev0>1</PRAutoIncludeDev0>
+      <DfltDBLevel0>-3.0</DfltDBLevel0>
+      <PreviewDevice>Front</PreviewDevice>
+      <PRVidAudLogicalDev0>Default</PRVidAudLogicalDev0>
+      <DfltVidAudDBLevel0>-3.0</DfltVidAudDBLevel0>
+      <LabelsUCase>0</LabelsUCase>
+      <FocusPoint>NextManual</FocusPoint>
+   </Head>
+   <Cue>
+      <CueId>Q1</CueId>
+      <Description>Preshow Announcement</Description>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>preshow</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\preshow.wav</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-3.0</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Cue>
+      <CueId>Q2</CueId>
+      <Description>Hurley Voiceover</Description>
+      <Sub>
+         <SubType>F</SubType>
+         <SubDescription>hurley_vo</SubDescription>
+         <DefSubDes>1</DefSubDes>
+         <AudioFile>
+            <FileName>$(Cue)\hurley_vo.wav</FileName>
+            <LogicalDev0>Front</LogicalDev0>
+            <DBLevel0>-3.0</DBLevel0>
+            <LvlPtLvlSelA>LvlIndiv</LvlPtLvlSelA>
+            <LvlPtPanSelA>PanUseAudDev</LvlPtPanSelA>
+            <LvlPt>
+               <LvlPtType>End</LvlPtType>
+               <LvlPtItem>
+                  <LvlPtItemLogicalDev>Front</LvlPtItemLogicalDev>
+                  <LvlPtItemRelDBLevel>+0.0</LvlPtItemRelDBLevel>
+               </LvlPtItem>
+            </LvlPt>
+         </AudioFile>
+      </Sub>
+   </Cue>
+   <Files>
+      <File>
+         <FileName>$(Cue)\preshow.wav</FileName>
+         <FileModified>2016-06-14 14:14:50</FileModified>
+         <FileSize>3715688</FileSize>
+         <FileType>WAV 48000 Hz, 32 bits, mono</FileType>
+         <FileTitle>preshow</FileTitle>
+         <FileDuration>19352</FileDuration>
+         <FileChannels>1</FileChannels>
+      </File>
+      <File>
+         <FileName>$(Cue)\hurley_vo.wav</FileName>
+         <FileModified>2016-06-14 14:27:10</FileModified>
+         <FileSize>2931336</FileSize>
+         <FileType>WAV 48000 Hz, 32 bits, mono</FileType>
+         <FileTitle>hurley_vo</FileTitle>
+         <FileDuration>15267</FileDuration>
+         <FileChannels>1</FileChannels>
+      </File>
+   </Files>
+   <FileSaveInfo>
+      <_CueFile_>D:\baos\flashdance\Flashdance.scs11</_CueFile_>
+      <_Saved_>2016/06/14 15:47:58</_Saved_>
+      <_SCS_Version_>11.4.1.1</_SCS_Version_>
+      <_SCS_Build_>2015/10/26 10:59</_SCS_Build_>
+   </FileSaveInfo>
+</Production>
