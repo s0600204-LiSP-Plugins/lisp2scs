@@ -20,12 +20,64 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
+"""SCS MIDI (sub)Cue:
+
+SubCue enum value: "M"
+SubCue limit: 16
+
+Encapsulating Node: ControlMessage
+
+Sub Nodes:
+    Required:
+        CMLogicalDev
+        MSMsgType       enum      "FREE"
+                                | "PC127"   (Program Change 0-127)
+                                | "PC128"   (Program Change 1-128)
+                                | "CC"      (Control Change)
+                                | "ON"      (Note On)
+                                | "OFF"     (Note Off)
+                                | "MSC"     (Midi Show Control)
+
+    if MsMsgType == "FREE":
+        Required:
+            MIDIData    string      <hexcode>
+
+    if MsMsgType == "PC127" || "PC128"
+        Required:
+            MSChannel   integer     Channel
+            MSParam1    integer     Program Number
+
+    if MsMsgType == "CC" || "ON" || "OFF"
+        Required:
+            MSChannel   integer     Channel
+            MSParam1    integer     Control Number
+            MSParam2    Integer     Value
+
+    if MsMsgType == "MSC":
+        Required:
+            MSChannel   string      Device ID
+            MSParam1    int enum    Device Type [1=Lighting, 16=Sound, 96=Pyro, ...]
+            MSParam2    int enum    [1=Go, 2=Stop, 7=Fire, ...]
+
+    If MsMsgType == "MSC"; MSParam2 == 1 || 2 ("Go", "Stop"):
+        Required:
+            MSQNumber   string  Cue Number
+        Optional:
+            MSQList     string
+            MSQPath     string
+
+    If MsMsgType == "MSC"; and MSParam2 == 7 ("Fire")
+        Required:
+            MSMacro     string      Macro Num
+
+"""
+
 
 class MidiCueInterpreter:
 
     lisp_plugin = "Midi"
     lisp_cuetype = "MidiCue"
-    scs_cuetype = "Midi"
+    scs_cuetype = "M"
 
     def __init__(self):
         pass

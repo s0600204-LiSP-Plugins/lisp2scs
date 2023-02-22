@@ -20,12 +20,48 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
+"""SCS Audio (sub)Cue:
+
+SubCue enum value: "F"
+
+Encapsulating Node: AudioFile
+
+Sub Nodes:
+    Required:
+        FileName - string; relational path to file
+
+    Optional:
+        FadeInTime      integer     <milliseconds>
+        FadeOutTime     integer     <milliseconds>
+        StartAt         integer     <milliseconds>
+        EndAt           integer     <milliseconds>
+        Loop            integer
+        LoopStart       integer     <milliseconds>
+        LoopEnd         integer     <milliseconds>
+
+        LogicalDev{x}   string      device name
+        DBLevel{x}      float       volume
+
+    Optional in 11.2.3:
+        Pan{x}          integer
+
+    Optional in 11.4.0.3 and 11.4.1.1:
+        ## The following exists on every AudioFile subcue @ 11.4.0.3, 11.4.1.1, but not @ 11.2.3
+        LvlPtLvlSelA    ??          ["LvlIndiv"]
+        LvlPtPanSelA    ??          ["PanUseAudDev"]
+        LvlPt           array
+            LvlPtType                   ["FadeIn", "End"]
+            LvlPtItem       array
+                LvlPtItemLogicalDev     string      device name
+                LvlPtItemRelDBLevel     float       volume
+"""
+
 
 class AudioCueInterpreter:
 
     lisp_plugin = "GstBackend"
     lisp_cuetype = "GstMediaCue"
-    scs_cuetype = "Audio"
+    scs_cuetype = "F"
 
     def __init__(self):
         pass
