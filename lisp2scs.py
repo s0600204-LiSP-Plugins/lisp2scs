@@ -31,6 +31,7 @@ from PyQt5.QtWidgets import (
 from lisp.core.plugin import Plugin
 from lisp.ui.ui_utils import translate
 
+from .exporter import SCS_XML_INDENT, ScsExporter
 from .interpreters import find_interpreters
 
 
@@ -47,6 +48,16 @@ class Lisp2Scs(Plugin):
 
     def __init__(self, app):
         super().__init__(app)
+
+        # Device Maps (which sound/video/lighting interfaces are in use)
+        # are stored locally on a show machine, rather than being saved
+        # to a showfile. The ProdId identifies which Device Map to use.
+        #
+        # We don't create one - we don't know the rules - but we can
+        # save an existing one on Import.
+        #
+        # @todo: Null this on LiSP showfile creation(/loading)
+        self._prod_id = None
 
         # Find interpreters (but don't init them)
         self._interpreters = {}
@@ -103,6 +114,10 @@ class Lisp2Scs(Plugin):
         # run interpreters
         # prompt for location
         # write file
+
+        exporter = ScsExporter(self.app)
+        document = exporter.export(self._prod_id)
+        print(document.toprettyxml(indent=SCS_XML_INDENT)) # @todo: add `encoding="UTF-8"`
 
     def import_showfile(self):
         pass
