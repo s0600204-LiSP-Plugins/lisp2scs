@@ -72,6 +72,27 @@ Sub Nodes:
 
 """
 
+try:
+    from lisp.plugins.midi.midi_utils import midi_str_to_dict
+except ImportError:
+    midi_str_to_dict = None
+
+
+MESSAGE_TYPES = {
+    "note_on": "ON",
+    "note_off": "OFF",
+    "polytouch": None,
+    "control_change": "CC",
+    "program_change": "PC127",
+    "aftertouch": None,
+    "pitchwheel": "CC",
+    "song_select": None,
+    "songpos": None,
+    "start": None,
+    "stop": None,
+    "continue": None,
+}
+
 
 class MidiCueInterpreter:
 
@@ -80,10 +101,44 @@ class MidiCueInterpreter:
     scs_cuetype = "M"
 
     def __init__(self):
-        pass
+        print("MIDI cue interpreter init")
 
-    def export_cue(self, lisp_cue):
-        pass
+    def export_cue(self, exporter, lisp_cue):
+        scs_cue = exporter.build_generic_cue(lisp_cue)
+        subcue = exporter.build_generic_subcue(lisp_cue, self.scs_cuetype)
+        details = exporter.dom.createElement("ControlMessage")
+
+        details.appendChild(exporter.create_text_element("CMLogicalDev", "MIDI"))
+
+        message = lisp_cue.properties()['message']
+        if message:
+            message = midi_str_to_dict(message)
+            scs_type = MESSAGE_TYPES[message['type']]
+
+            if not scs_type:
+                # @todo:
+                # * Implement the missing types (which will all need building as FREE)
+                print(f"message type '{ message['type'] }' needs implementing")
+                return []
+
+            details.appendChild(exporter.create_text_element("MSMsgType", scs_type))
+
+            if scs_type not in ["MSC", "FREE"]:
+                # MSC should be given the device-id here, but mido (and
+                # thus LiSP) doesn't support MSC natively.
+                details.appendChild(
+                    exporter.create_text_element("MSChannel", message['channel'] + 1))
+
+            if scs_type == "CC":
+                details.appendChild(exporter.create_text_element("MSParam1", message['control']))
+                details.appendChild(exporter.create_text_element("MSParam2", message['value']))
+            elif scs_type in ["ON", "OFF"]:
+                details.appendChild(exporter.create_text_element("MSParam1", message['note']))
+                details.appendChild(exporter.create_text_element("MSParam2", message['velocity']))
+
+        subcue.appendChild(details)
+        scs_cue.appendChild(subcue)
+        return [scs_cue]
 
     def import_cue(self, scs_cue):
         pass
