@@ -115,8 +115,8 @@ class Lisp2Scs(Plugin):
         # prompt for location
         # write file
 
-        exporter = ScsExporter(self.app)
-        document = exporter.export(self._prod_id)
+        exporter = ScsExporter(self.app, self._interpreters)
+        document = exporter.export(self._prod_id, self.app.layout.cues())
         print(document.toprettyxml(indent=SCS_XML_INDENT)) # @todo: add `encoding="UTF-8"`
 
     def import_showfile(self):

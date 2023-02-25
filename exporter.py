@@ -10,14 +10,19 @@ SCS_XML_INDENT = ' ' * 4
 
 class ScsExporter:
 
-    def __init__(self, app):
+    def __init__(self, app, interpreters):
 
         self._app = app
         self._impl = getDOMImplementation()
         self._dom = None
         self._prod_id = None
+        self._interpreters = interpreters
 
-    def export(self, prod_id):
+    @property
+    def dom(self):
+        return self._dom
+
+    def export(self, prod_id, cues):
         self._prod_id = prod_id
         self._dom = self._impl.createDocument(None, "Production", None)
 
@@ -25,7 +30,14 @@ class ScsExporter:
 
         document.appendChild(self.build_production_head())
 
-        document.appendChild(self._dom.createElement("Files"))
+        for lisp_cue in cues:
+            cue_type = lisp_cue.__class__.__name__
+            if cue_type not in self._interpreters:
+                # A warning has already been given if no appropriate interpreter is present
+                continue
+
+            for scs_cue in self._interpreters[cue_type].export_cue(self, lisp_cue):
+                document.appendChild(scs_cue)
 
         return self._dom
 
@@ -33,7 +45,7 @@ class ScsExporter:
         if isinstance(content, bool):
             content = int(content)
 
-        if isinstance(content, int):
+        if isinstance(content, int) or isinstance(content, float):
             content = str(content)
 
         element = self._dom.createElement(element_name)
@@ -193,6 +205,56 @@ class ScsExporter:
             self.create_text_element("PRCSDevType", "MIDIOut"))
 
         return [device]
+
+    def build_generic_cue(self, lisp_cue):
+        """Creates a new SCS cue. Must have at least one SubCue.
+
+        Encapsulating Node: Cue
+
+        Sub Nodes:
+            Required:
+                CueID               string      e.g. "Q1"
+                Description         string      Used in the SCS UI as a Cue Name
+            Optional:
+                PageNo              string
+                WhenReqd            string
+                DefDes              bool int    Indicates whether <Description/> is default
+                Enabled             bool int
+                ActivationMethod    enum        "auto" | <??>
+            Seem optional, but may be required if ActivationMethod == "auto":
+                AutoActivateCue     string      CueId
+                AutoActivatePosn    enum        "start" | <??>
+                AutoActivateTime    integer     <milliseconds>
+        """
+        scs_cue = self._dom.createElement("Cue")
+        scs_cue.appendChild(self.create_text_element("CueID", lisp_cue.index + 1))
+        scs_cue.appendChild(self.create_text_element("Description", lisp_cue.name))
+        if lisp_cue.description:
+            scs_cue.appendChild(self.create_text_element("WhenReqd", lisp_cue.description))
+        return scs_cue
+
+    def build_generic_subcue(self, lisp_cue, scs_cuetype):
+        """Creates a new SubCue. Each Cue must have at least one SubCue.
+
+        Encapsulating Node: Sub
+
+        Sub Nodes:
+            Required:
+                SubType         enum          "M"   (Midi)
+                                            | "F"   (Audio)
+                                            | "S"   (Fade Out And/Or Stop)
+                                            | "L"   (Volume Level Change)
+                                            | "K"   (Lighting Control)
+            Optional:
+                SubDescription  string      Used in the SCS UI as SubCue Name
+                DefSubDes       bool int    Indicates whether <SubDescription/> is default
+                RelStartMode    enum        "ae_prev_sub" | "as_cue" | "as_prev_sub"
+                RelStartTime    integer     <milliseconds>
+        """
+        scs_subcue = self._dom.createElement("Sub")
+        scs_subcue.appendChild(self.create_text_element("SubType", scs_cuetype))
+        scs_subcue.appendChild(self.create_text_element("SubDescription", lisp_cue.name))
+        return scs_subcue
 
     def build_production_head(self):
         head = self._dom.createElement("Head")
