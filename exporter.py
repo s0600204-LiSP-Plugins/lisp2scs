@@ -6,6 +6,8 @@ from xml.dom.minidom import getDOMImplementation
 from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
+from .util import ExportKeys
+
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
 
@@ -40,7 +42,9 @@ class ScsExporter:
                 # A warning has already been given if no appropriate interpreter is present
                 continue
 
-            for scs_cue in self._interpreters[cue_type].export_cue(self, lisp_cue):
+            exported = self._interpreters[cue_type].export_cue(self, lisp_cue)
+
+            for scs_cue in exported[ExportKeys.Cues]:
                 document.appendChild(scs_cue)
 
         return self._dom

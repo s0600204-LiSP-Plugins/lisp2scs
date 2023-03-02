@@ -77,6 +77,8 @@ try:
 except ImportError:
     midi_str_to_dict = None
 
+from ..util import ExportKeys
+
 
 MESSAGE_TYPES = {
     "note_on": "ON",
@@ -138,7 +140,9 @@ class MidiCueInterpreter:
 
         subcue.appendChild(details)
         scs_cue.appendChild(subcue)
-        return [scs_cue]
+        return {
+            ExportKeys.Cues: [scs_cue],
+        }
 
     def import_cue(self, scs_cue):
         pass

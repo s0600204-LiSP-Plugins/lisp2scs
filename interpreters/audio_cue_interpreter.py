@@ -57,6 +57,8 @@ Sub Nodes:
 
 from lisp.backend.audio_utils import linear_to_db
 
+from ..util import ExportKeys
+
 
 class AudioCueInterpreter:
 
@@ -100,7 +102,9 @@ class AudioCueInterpreter:
 
         subcue.appendChild(details)
         scs_cue.appendChild(subcue)
-        return [scs_cue]
+        return {
+            ExportKeys.Cues: [scs_cue],
+        }
 
     def import_cue(self, scs_cue):
         pass
