@@ -71,6 +71,8 @@ class ScsExporter:
 
     def build_audio_definitions(self, devices):
         """
+        Devices for playing audio from Audio files
+
         .. note: At least one audio device must be defined, even if no audio cues exist.
 
         .. note: Mappings to actual physical devices are done locally on a machine.
@@ -79,7 +81,6 @@ class ScsExporter:
         if not len(devices):
             devices.add(ScsAudioDevice(name='Placeholder', channels=2))
 
-        # Devices for playing audio from Audio files
         definitions = []
         idx = 0
         for device in devices:
@@ -103,12 +104,6 @@ class ScsExporter:
                 definitions.append(self.create_text_element("PreviewDevice", device.name))
 
             idx += 1
-
-        # Devices for playing audio from Video files
-        for idx in range(1):
-
-            # User-definable identifier
-            definitions.append(self.create_text_element(f"PRVidAudLogicalDev{idx}", "Default"))
 
         return definitions
 
@@ -332,6 +327,9 @@ class ScsExporter:
         for element in self.build_audio_definitions(devices[ScsDeviceType.Audio]):
             head.appendChild(element)
 
+        for element in self.build_videoaudio_definitions(devices[ScsDeviceType.VideoAudio]):
+            head.appendChild(element)
+
         for element in self.build_control_tx_definitions(devices[ScsDeviceType.Midi]):
             head.appendChild(element)
 
@@ -339,3 +337,18 @@ class ScsExporter:
             head.appendChild(element)
 
         return head
+
+    def build_videoaudio_definitions(self, devices):
+        """
+        Devices for playing audio from Video files
+        """
+        definitions = []
+        idx = 0
+        for device in devices:
+
+            # User-definable identifier
+            definitions.append(self.create_text_element(f"PRVidAudLogicalDev{idx}", device.name))
+
+            idx += 1
+
+        return definitions
