@@ -6,7 +6,7 @@ from xml.dom.minidom import getDOMImplementation
 from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
-from .util import ExportKeys, ScsDeviceType
+from .util import ExportKeys, ScsAudioDevice, ScsDeviceType
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -38,8 +38,6 @@ class ScsExporter:
 
         document = self._dom.documentElement
 
-        document.appendChild(self.build_production_head())
-
         for lisp_cue in cues:
             cue_type = lisp_cue.__class__.__name__
             if cue_type not in self._interpreters:
@@ -55,6 +53,8 @@ class ScsExporter:
                 device_type, device_details = exported[ExportKeys.Device]
                 devices[device_type].add(device_details)
 
+        document.insertBefore(self.build_production_head(devices), document.firstChild)
+
         return self._dom
 
     def create_text_element(self, element_name, content):
@@ -69,27 +69,27 @@ class ScsExporter:
             self._dom.createTextNode(content))
         return element
 
-    def build_audio_definitions(self):
+    def build_audio_definitions(self, devices):
         """
         .. note: At least one audio device must be defined, even if no audio cues exist.
 
         .. note: Mappings to actual physical devices are done locally on a machine.
         """
 
-        definitions = []
-
-        # @todo:
-        #   Get devices used in cues
+        if not len(devices):
+            devices.add(ScsAudioDevice(name='Placeholder', channels=2))
 
         # Devices for playing audio from Audio files
-        for idx in range(1):
+        definitions = []
+        idx = 0
+        for device in devices:
 
             # User-definable identifier
-            definitions.append(self.create_text_element(f"PRLogicalDev{idx}", "Front"))
+            definitions.append(self.create_text_element(f"PRLogicalDev{idx}", device.name))
 
             # Device Channel Count
             # @todo: Get channel count of device
-            definitions.append(self.create_text_element(f"PRNumChans{idx}", 2))
+            definitions.append(self.create_text_element(f"PRNumChans{idx}", device.channels))
 
             # Automatically include device in new audio cues (optional)
             #   Default: False
@@ -97,14 +97,18 @@ class ScsExporter:
             if not idx:
                 definitions.append(self.create_text_element(f"PRAutoIncludeDev{idx}", True))
 
+            # The Audio Device to use when Previewing an Audio File
+            # We use the first device defined for this.
+            if not idx:
+                definitions.append(self.create_text_element("PreviewDevice", device.name))
+
+            idx += 1
+
         # Devices for playing audio from Video files
         for idx in range(1):
 
             # User-definable identifier
             definitions.append(self.create_text_element(f"PRVidAudLogicalDev{idx}", "Default"))
-
-        # The Audio Device used when Previewing an Audio File
-        definitions.append(self.create_text_element("PreviewDevice", "Front"))
 
         return definitions
 
@@ -225,7 +229,7 @@ class ScsExporter:
 
         return devices
 
-    def build_control_tx_definitions(self):
+    def build_control_tx_definitions(self, devices):
         """
         SCS supports being sending either MIDI or RS232. LiSP supports
         MIDI or OSC.
@@ -247,20 +251,23 @@ class ScsExporter:
         except PluginNotLoadedError:
             return []
 
-        # @todo: Determine if there's any MIDI cues, and if there are not, skip this.
+        scs_devices = []
+        for spec in devices:
 
-        device = self._dom.createElement("PRCSDevice")
+            prcs_device = self._dom.createElement("PRCSDevice")
 
-        # User-definable identifier for the device
-        device.appendChild(
-            self.create_text_element("PRCSLogicalDev", "MIDI"))
+            # User-definable identifier for the device
+            prcs_device.appendChild(
+                self.create_text_element("PRCSLogicalDev", spec.name))
 
-        # Device Type
-        #   MIDIOut | RS232Out
-        device.appendChild(
-            self.create_text_element("PRCSDevType", "MIDIOut"))
+            # Device Type
+            #   MIDIOut | RS232Out
+            prcs_device.appendChild(
+                self.create_text_element("PRCSDevType", "MIDIOut"))
 
-        return [device]
+            scs_devices.append(prcs_device)
+
+        return scs_devices
 
     def build_generic_cue(self, lisp_cue):
         """Creates a new SCS cue. Must have at least one SubCue.
@@ -312,7 +319,7 @@ class ScsExporter:
         scs_subcue.appendChild(self.create_text_element("SubDescription", lisp_cue.name))
         return scs_subcue
 
-    def build_production_head(self):
+    def build_production_head(self, devices):
         head = self._dom.createElement("Head")
 
         # Name of the Production
@@ -322,10 +329,10 @@ class ScsExporter:
         if self._prod_id:
             head.appendChild(self.create_text_element("ProdId", self._prod_id))
 
-        for element in self.build_audio_definitions():
+        for element in self.build_audio_definitions(devices[ScsDeviceType.Audio]):
             head.appendChild(element)
 
-        for element in self.build_control_tx_definitions():
+        for element in self.build_control_tx_definitions(devices[ScsDeviceType.Midi]):
             head.appendChild(element)
 
         for element in self.build_control_rx_definitions():
