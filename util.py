@@ -18,3 +18,4 @@ class ScsDeviceType(StrEnum):
     VideoAudio = enum.auto()
 
 ScsAudioDevice = namedtuple('ScsAudioDevice', ['name', 'channels'])
+ScsMidiDevice = namedtuple('ScsMidiDevice', ['name'])
