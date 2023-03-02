@@ -54,10 +54,10 @@ Sub Nodes:
                 LvlPtItemPan            integer     0 -> *500 -> 1000
 """
 
-
 from lisp.backend.audio_utils import linear_to_db
+from lisp.plugins import get_plugin
 
-from ..util import ExportKeys
+from ..util import ExportKeys, ScsAudioDevice, ScsDeviceType
 
 
 class AudioCueInterpreter:
@@ -68,6 +68,52 @@ class AudioCueInterpreter:
 
     def __init__(self):
         print("Audio cue interpreter init")
+
+    def _build_audio_device(self, exporter, lisp_cue):
+
+        if hasattr(lisp_cue.media.elements, "AutoSink"):
+            sink_name = "System"
+            sink_channels = 2
+
+        elif hasattr(lisp_cue.media.elements, "AlsaSink"):
+            # @todo: Implement AlsaSink handling
+            sink_name = "Alsa"
+            sink_channels = 2
+
+        elif hasattr(lisp_cue.media.elements, "JackSink"):
+            # @todo: Implement JackSink handling
+            sink_name = "Jack"
+            sink_channels = 8 # @todo: Get actual number
+
+        elif hasattr(lisp_cue.media.elements, "PulseSink"):
+            # @todo: Implement PulseSink handling
+            sink_name = "Pulse"
+            sink_channels = 2
+
+        else:
+            print("No Sink?")
+            for elem in lisp_cue.media.elements:
+                print(elem)
+            return ()
+
+        return (
+            self._determine_export_cue_type(lisp_cue),
+            ScsAudioDevice(
+                name=sink_name,
+                channels=sink_channels
+            )
+        )
+
+    def _determine_export_cue_type(self, lisp_cue):
+        uri = lisp_cue.media.elements.UriInput.uri
+        ext = uri[uri.rindex('.') + 1:]
+        exts = get_plugin('GstBackend').supported_extensions()
+        if ext in exts['audio']:
+            return ScsDeviceType.Audio
+        if ext in exts['video']:
+            return ScsDeviceType.VideoAudio
+        print(f"Unable to determine type of file extension {ext}!")
+        return None
 
     def export_cue(self, exporter, lisp_cue):
         if not hasattr(lisp_cue.media.elements, "UriInput"):
@@ -104,6 +150,7 @@ class AudioCueInterpreter:
         scs_cue.appendChild(subcue)
         return {
             ExportKeys.Cues: [scs_cue],
+            ExportKeys.Device: self._build_audio_device(exporter, lisp_cue),
         }
 
     def import_cue(self, scs_cue):

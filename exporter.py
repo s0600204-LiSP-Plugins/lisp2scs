@@ -6,7 +6,7 @@ from xml.dom.minidom import getDOMImplementation
 from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
-from .util import ExportKeys
+from .util import ExportKeys, ScsDeviceType
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -32,6 +32,10 @@ class ScsExporter:
         self._prod_id = prod_id
         self._dom = self._impl.createDocument(None, "Production", None)
 
+        devices = {}
+        for devtype in ScsDeviceType:
+            devices[devtype] = set()
+
         document = self._dom.documentElement
 
         document.appendChild(self.build_production_head())
@@ -46,6 +50,10 @@ class ScsExporter:
 
             for scs_cue in exported[ExportKeys.Cues]:
                 document.appendChild(scs_cue)
+
+            if ExportKeys.Device in exported:
+                device_type, device_details = exported[ExportKeys.Device]
+                devices[device_type].add(device_details)
 
         return self._dom
 

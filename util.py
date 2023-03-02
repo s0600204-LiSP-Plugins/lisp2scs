@@ -1,4 +1,5 @@
 
+from collections import namedtuple
 import enum
 
 if not hasattr(enum, 'StrEnum'):
@@ -9,3 +10,11 @@ if not hasattr(enum, 'StrEnum'):
 
 class ExportKeys(StrEnum):
     Cues = enum.auto()
+    Device = enum.auto()
+
+class ScsDeviceType(StrEnum):
+    Audio = enum.auto()
+    Midi = enum.auto()
+    VideoAudio = enum.auto()
+
+ScsAudioDevice = namedtuple('ScsAudioDevice', ['name', 'channels'])
