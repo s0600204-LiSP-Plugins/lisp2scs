@@ -36,7 +36,7 @@ class GstMediaCueExporter:
     def __init__(self):
         print("GstMedia cue exporter init")
 
-    def _build_audio_cue(self, exporter, lisp_cue, scs_device, scs_subcude):
+    def _build_audio_cue(self, exporter, lisp_cue, scs_device, scs_subcue):
         details = exporter.dom.createElement("AudioFile")
 
         # @todo:

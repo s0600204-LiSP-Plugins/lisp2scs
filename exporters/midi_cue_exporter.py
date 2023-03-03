@@ -54,11 +54,12 @@ class MidiCueExporter:
         print("MIDI cue exporter init")
 
     def export_cue(self, exporter, lisp_cue):
+        scs_device = ScsMidiDevice(name='MIDI')
         scs_cue = exporter.build_generic_cue(lisp_cue)
         subcue = exporter.build_generic_subcue(lisp_cue, self.scs_cuetype)
         details = exporter.dom.createElement("ControlMessage")
 
-        details.appendChild(exporter.create_text_element("CMLogicalDev", "MIDI"))
+        details.appendChild(exporter.create_text_element("CMLogicalDev", scs_device.name))
 
         message = lisp_cue.properties()['message']
         if message:
@@ -90,5 +91,5 @@ class MidiCueExporter:
         scs_cue.appendChild(subcue)
         return {
             ExportKeys.Cues: [scs_cue],
-            ExportKeys.Device: (ScsDeviceType.Midi, ScsMidiDevice(name='MIDI'))
+            ExportKeys.Device: (ScsDeviceType.Midi, scs_device)
         }
