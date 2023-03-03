@@ -36,7 +36,7 @@ class GstMediaCueExporter:
     def __init__(self):
         print("GstMedia cue exporter init")
 
-    def _build_audio_cue(self, exporter, lisp_cue, scs_subcue):
+    def _build_audio_cue(self, exporter, lisp_cue, scs_device, scs_subcude):
         details = exporter.dom.createElement("AudioFile")
 
         # @todo:
@@ -45,9 +45,7 @@ class GstMediaCueExporter:
         uri = lisp_cue.media.elements.UriInput.uri
         details.appendChild(exporter.create_text_element("FileName", uri))
 
-        # @todo:
-        # * Use actual device name
-        details.appendChild(exporter.create_text_element("LogicalDev0", "Front"))
+        details.appendChild(exporter.create_text_element("LogicalDev0", scs_device.name))
 
         if hasattr(lisp_cue.media.elements, "Volume"):
             details.appendChild(
@@ -100,13 +98,13 @@ class GstMediaCueExporter:
                 name=sink_name
             )
 
-    def _build_video_cue(self, exporter, lisp_cue, scs_subcue):
+    def _build_video_cue(self, exporter, lisp_cue, scs_device, scs_subcue):
 
         scs_subcue.appendChild(
             exporter.create_text_element("OutputScreen", 2))
 
         scs_subcue.appendChild(
-            exporter.create_text_element("VideoLogicalAudioDev", "Default"))
+            exporter.create_text_element("VideoLogicalAudioDev", scs_device.name))
 
         if hasattr(lisp_cue.media.elements, "Volume"):
             scs_subcue.appendChild(
@@ -144,13 +142,14 @@ class GstMediaCueExporter:
             return []
 
         scs_cuetype = self._determine_export_cue_type(lisp_cue)
+        scs_device = self._build_device(scs_cuetype, lisp_cue)
         if scs_cuetype == ScsDeviceType.Audio:
             subcue = exporter.build_generic_subcue(lisp_cue, self.scs_subtype_audio)
-            self._build_audio_cue(exporter, lisp_cue, subcue)
+            self._build_audio_cue(exporter, lisp_cue, scs_device, subcue)
 
         elif scs_cuetype == ScsDeviceType.VideoAudio:
             subcue = exporter.build_generic_subcue(lisp_cue, self.scs_subtype_video)
-            self._build_video_cue(exporter, lisp_cue, subcue)
+            self._build_video_cue(exporter, lisp_cue, scs_device, subcue)
 
         else:
             return ()
@@ -161,6 +160,6 @@ class GstMediaCueExporter:
             ExportKeys.Cues: [scs_cue],
             ExportKeys.Device: (
                 scs_cuetype,
-                self._build_device(scs_cuetype, lisp_cue),
+                scs_device,
             )
         }
