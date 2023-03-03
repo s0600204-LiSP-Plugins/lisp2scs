@@ -21,4 +21,5 @@ ScsAudioDevice = namedtuple('ScsAudioDevice', ['name', 'channels'])
 ScsMidiDevice = namedtuple('ScsMidiDevice', ['name'])
 ScsVideoAudioDevice = namedtuple('ScsVideoAudioDevice', ['name'])
 
+SCS_FILE_EXT = '.scs11'
 SCS_FILE_REL_PREFIX = '$(Cue)\\'

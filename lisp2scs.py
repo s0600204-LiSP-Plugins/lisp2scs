@@ -21,9 +21,11 @@
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+import os
 
 from PyQt5.QtWidgets import (
     QAction,
+    QFileDialog,
     QMenu,
 )
 
@@ -33,6 +35,7 @@ from lisp.ui.ui_utils import translate
 
 from .exporter import SCS_XML_INDENT, ScsExporter
 from .exporters import find_exporters
+from .util import SCS_FILE_EXT
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -98,6 +101,10 @@ class Lisp2Scs(Plugin):
         self.import_action.setText(translate("Lisp2Scs", "Show Cue Systems"))
 
     def export_showfile(self):
+        filename = self.get_export_filename()
+        if not filename:
+            return
+
         # Get used cue types
         cuetypes = {cue.__class__.__name__ for cue in self.app.layout.cues()}
 
@@ -111,13 +118,31 @@ class Lisp2Scs(Plugin):
             if isinstance(self._exporters[cuetype], type):
                 self._exporters[cuetype] = self._exporters[cuetype]()
 
-        # run interpreters
-        # prompt for location
-        # write file
-
         exporter = ScsExporter(self.app, self._exporters)
         document = exporter.export(self._prod_id, self.app.layout.cues())
-        print(document.toprettyxml(indent=SCS_XML_INDENT)) # @todo: add `encoding="UTF-8"`
+
+        with open(filename, mode="w", encoding="utf-8") as file:
+            file.write(document.toprettyxml(indent=SCS_XML_INDENT))
+
+    def get_export_filename(self):
+        if self.app.session.session_file:
+            directory = self.app.session.dir()
+        else:
+            directory = self.app.conf.get(
+                "session.lastPath",
+                os.getenv("HOME"))
+
+        path, _ = QFileDialog.getSaveFileName(
+            parent=self.app.window,
+            filter=f"*{SCS_FILE_EXT}",
+            directory=directory
+        )
+
+        if path:
+            if not path.endswith(SCS_FILE_EXT):
+                path += SCS_FILE_EXT
+            return path
+        return None
 
     def import_showfile(self):
         pass
