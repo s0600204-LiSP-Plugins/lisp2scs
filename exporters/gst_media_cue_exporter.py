@@ -23,7 +23,7 @@
 from lisp.backend.audio_utils import linear_to_db
 from lisp.plugins import get_plugin
 
-from ..util import ExportKeys, ScsAudioDevice, ScsVideoAudioDevice, ScsDeviceType
+from ..util import ExportKeys, ScsAudioDevice, ScsVideoAudioDevice, ScsDeviceType, SCS_FILE_REL_PREFIX
 
 
 class GstMediaCueExporter:
@@ -39,11 +39,9 @@ class GstMediaCueExporter:
     def _build_audio_cue(self, exporter, lisp_cue, scs_device, scs_subcue):
         details = exporter.dom.createElement("AudioFile")
 
-        # @todo:
-        # * lose the file:/// prefix
-        # * change the slashes from `/` to `\`
-        uri = lisp_cue.media.elements.UriInput.uri
-        details.appendChild(exporter.create_text_element("FileName", uri))
+        details.appendChild(
+            exporter.create_text_element(
+                "FileName", self._build_file_path(lisp_cue)))
 
         details.appendChild(exporter.create_text_element("LogicalDev0", scs_device.name))
 
@@ -98,6 +96,11 @@ class GstMediaCueExporter:
                 name=sink_name
             )
 
+    def _build_file_path(self, lisp_cue):
+        file_uri = lisp_cue.media.elements.UriInput.input_uri()
+        relative_path = file_uri.relative_path.replace('/', '\\')
+        return f"{SCS_FILE_REL_PREFIX}{relative_path}"
+
     def _build_video_cue(self, exporter, lisp_cue, scs_device, scs_subcue):
 
         scs_subcue.appendChild(
@@ -119,9 +122,8 @@ class GstMediaCueExporter:
 
         video_file = exporter.dom.createElement("VideoFile")
 
-        uri = lisp_cue.media.elements.UriInput.uri
         video_file.appendChild(
-            exporter.create_text_element("FileName", uri))
+            exporter.create_text_element("FileName", self._build_file_path(lisp_cue)))
 
         scs_subcue.appendChild(video_file)
 
