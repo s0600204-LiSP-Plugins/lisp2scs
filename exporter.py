@@ -16,13 +16,13 @@ SCS_XML_INDENT = ' ' * 4
 
 class ScsExporter:
 
-    def __init__(self, app, interpreters):
+    def __init__(self, app, exporters):
 
         self._app = app
         self._impl = getDOMImplementation()
         self._dom = None
         self._prod_id = None
-        self._interpreters = interpreters
+        self._exporters = exporters
 
     @property
     def dom(self):
@@ -40,11 +40,11 @@ class ScsExporter:
 
         for lisp_cue in cues:
             cue_type = lisp_cue.__class__.__name__
-            if cue_type not in self._interpreters:
-                # A warning has already been given if no appropriate interpreter is present
+            if cue_type not in self._exporters:
+                # A warning has already been given if no appropriate exporter is present
                 continue
 
-            exported = self._interpreters[cue_type].export_cue(self, lisp_cue)
+            exported = self._exporters[cue_type].export_cue(self, lisp_cue)
 
             for scs_cue in exported[ExportKeys.Cues]:
                 document.appendChild(scs_cue)

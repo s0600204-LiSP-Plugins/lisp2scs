@@ -20,54 +20,20 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
-"""SCS Audio (sub)Cue:
-
-SubCue enum value: "F"
-
-Encapsulating Node: AudioFile
-
-Sub Nodes:
-    Required:
-        FileName - string; relational path to file
-
-    Optional:
-        FadeInTime      integer     <milliseconds>
-        FadeOutTime     integer     <milliseconds>
-        StartAt         integer     <milliseconds>
-        EndAt           integer     <milliseconds>
-        Loop            integer
-        LoopStart       integer     <milliseconds>
-        LoopEnd         integer     <milliseconds>
-
-        LogicalDev{x}   string      device name
-        DBLevel{x}      float       volume
-        Pan{x}          integer     0 -> *500 -> 1000
-
-        LvlPtLvlSelA    enum        LvlIndiv | LvlSync | LvlLink
-        LvlPtPanSelA    enum        PanUseAudDev | PanIndiv | PanSync
-
-        LvlPt           array       A point of the integrated fade envelope
-            LvlPtType                   Start | FadeIn | FadeOut | End
-            LvlPtItem       array
-                LvlPtItemLogicalDev     string      device name
-                LvlPtItemRelDBLevel     float       volume
-                LvlPtItemPan            integer     0 -> *500 -> 1000
-"""
-
 from lisp.backend.audio_utils import linear_to_db
 from lisp.plugins import get_plugin
 
 from ..util import ExportKeys, ScsAudioDevice, ScsDeviceType
 
 
-class AudioCueInterpreter:
+class GstMediaCueExporter:
 
     lisp_plugin = "GstBackend"
     lisp_cuetype = "GstMediaCue"
     scs_cuetype = "F"
 
     def __init__(self):
-        print("Audio cue interpreter init")
+        print("GstMedia cue exporter init")
 
     def _build_audio_device(self, exporter, lisp_cue):
 
@@ -152,6 +118,3 @@ class AudioCueInterpreter:
             ExportKeys.Cues: [scs_cue],
             ExportKeys.Device: self._build_audio_device(exporter, lisp_cue),
         }
-
-    def import_cue(self, scs_cue):
-        pass

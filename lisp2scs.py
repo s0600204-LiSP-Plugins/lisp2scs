@@ -32,7 +32,7 @@ from lisp.core.plugin import Plugin
 from lisp.ui.ui_utils import translate
 
 from .exporter import SCS_XML_INDENT, ScsExporter
-from .interpreters import find_interpreters
+from .exporters import find_exporters
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -59,16 +59,16 @@ class Lisp2Scs(Plugin):
         # @todo: Null this on LiSP showfile creation(/loading)
         self._prod_id = None
 
-        # Find interpreters (but don't init them)
-        self._interpreters = {}
-        for name, interpreter in find_interpreters():
-            cuetype = interpreter.lisp_cuetype
-            if cuetype in self._interpreters:
-                logger.warn(f"Already registered interpreter for cue type {cuetype}")
+        # Find exporters (but don't init them)
+        self._exporters = {}
+        for name, exporter in find_exporters():
+            cuetype = exporter.lisp_cuetype
+            if cuetype in self._exporters:
+                logger.warn(f"Already registered an exporter for cue type {cuetype}")
                 continue
 
-            logger.debug(f"Registering interpreter for {cuetype}: {name}.")
-            self._interpreters[cuetype] = interpreter
+            logger.debug(f"Registering exporter for {cuetype}: {name}.")
+            self._exporters[cuetype] = exporter
 
         # Append actions to File menu
         file_menu = self.app.window.menuFile
@@ -102,20 +102,20 @@ class Lisp2Scs(Plugin):
         cuetypes = {cue.__class__.__name__ for cue in self.app.layout.cues()}
 
         for cuetype in cuetypes:
-            # Check we have an interpreters for each cue type
-            if cuetype not in self._interpreters:
-                logger.warning(f"No registered interpreter for Cues of type {cuetype}")
+            # Check we have an exporter for each cue type
+            if cuetype not in self._exporters:
+                logger.warning(f"No registered exporter for Cues of type {cuetype}")
                 continue
 
             # And if we do, initialise an instance of it, if needed
-            if isinstance(self._interpreters[cuetype], type):
-                self._interpreters[cuetype] = self._interpreters[cuetype]()
+            if isinstance(self._exporters[cuetype], type):
+                self._exporters[cuetype] = self._exporters[cuetype]()
 
         # run interpreters
         # prompt for location
         # write file
 
-        exporter = ScsExporter(self.app, self._interpreters)
+        exporter = ScsExporter(self.app, self._exporters)
         document = exporter.export(self._prod_id, self.app.layout.cues())
         print(document.toprettyxml(indent=SCS_XML_INDENT)) # @todo: add `encoding="UTF-8"`
 
