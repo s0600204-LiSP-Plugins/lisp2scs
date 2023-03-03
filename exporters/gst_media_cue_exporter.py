@@ -23,19 +23,47 @@
 from lisp.backend.audio_utils import linear_to_db
 from lisp.plugins import get_plugin
 
-from ..util import ExportKeys, ScsAudioDevice, ScsDeviceType
+from ..util import ExportKeys, ScsAudioDevice, ScsVideoAudioDevice, ScsDeviceType
 
 
 class GstMediaCueExporter:
 
     lisp_plugin = "GstBackend"
     lisp_cuetype = "GstMediaCue"
-    scs_cuetype = "F"
+    scs_subtype_audio = "F"
+    scs_subtype_video = "A"
 
     def __init__(self):
         print("GstMedia cue exporter init")
 
-    def _build_audio_device(self, exporter, lisp_cue):
+    def _build_audio_cue(self, exporter, lisp_cue, scs_subcue):
+        details = exporter.dom.createElement("AudioFile")
+
+        # @todo:
+        # * lose the file:/// prefix
+        # * change the slashes from `/` to `\`
+        uri = lisp_cue.media.elements.UriInput.uri
+        details.appendChild(exporter.create_text_element("FileName", uri))
+
+        # @todo:
+        # * Use actual device name
+        details.appendChild(exporter.create_text_element("LogicalDev0", "Front"))
+
+        if hasattr(lisp_cue.media.elements, "Volume"):
+            details.appendChild(
+                exporter.create_text_element(
+                    "DBLevel0", linear_to_db(lisp_cue.media.elements.Volume.volume)))
+
+        if hasattr(lisp_cue.media.elements, "AudioPan"):
+            # LiSP pan: -1.0 <-> 1.0
+            # SCS pan: 0 -> 1000
+            details.appendChild(
+                exporter.create_text_element(
+                    "Pan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
+
+        scs_subcue.appendChild(details)
+
+    def _build_device(self, cue_type, lisp_cue):
 
         if hasattr(lisp_cue.media.elements, "AutoSink"):
             sink_name = "System"
@@ -62,13 +90,42 @@ class GstMediaCueExporter:
                 print(elem)
             return ()
 
-        return (
-            self._determine_export_cue_type(lisp_cue),
-            ScsAudioDevice(
+        if cue_type == ScsDeviceType.Audio:
+            return ScsAudioDevice(
                 name=sink_name,
                 channels=sink_channels
             )
-        )
+        else:
+            return ScsVideoAudioDevice(
+                name=sink_name
+            )
+
+    def _build_video_cue(self, exporter, lisp_cue, scs_subcue):
+
+        scs_subcue.appendChild(
+            exporter.create_text_element("OutputScreen", 2))
+
+        scs_subcue.appendChild(
+            exporter.create_text_element("VideoLogicalAudioDev", "Default"))
+
+        if hasattr(lisp_cue.media.elements, "Volume"):
+            scs_subcue.appendChild(
+                exporter.create_text_element(
+                    "SubDBLevel0", linear_to_db(lisp_cue.media.elements.Volume.volume)))
+
+        if hasattr(lisp_cue.media.elements, "AudioPan"):
+            # LiSP pan: -1.0 <-> 1.0
+            # SCS pan: 0 -> 1000
+            scs_subcue.appendChild(
+                exporter.create_text_element("SubDBPan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
+
+        video_file = exporter.dom.createElement("VideoFile")
+
+        uri = lisp_cue.media.elements.UriInput.uri
+        video_file.appendChild(
+            exporter.create_text_element("FileName", uri))
+
+        scs_subcue.appendChild(video_file)
 
     def _determine_export_cue_type(self, lisp_cue):
         uri = lisp_cue.media.elements.UriInput.uri
@@ -86,35 +143,24 @@ class GstMediaCueExporter:
             # @todo: Warn user that this cue will be skipped before export process
             return []
 
+        scs_cuetype = self._determine_export_cue_type(lisp_cue)
+        if scs_cuetype == ScsDeviceType.Audio:
+            subcue = exporter.build_generic_subcue(lisp_cue, self.scs_subtype_audio)
+            self._build_audio_cue(exporter, lisp_cue, subcue)
+
+        elif scs_cuetype == ScsDeviceType.VideoAudio:
+            subcue = exporter.build_generic_subcue(lisp_cue, self.scs_subtype_video)
+            self._build_video_cue(exporter, lisp_cue, subcue)
+
+        else:
+            return ()
+
         scs_cue = exporter.build_generic_cue(lisp_cue)
-        subcue = exporter.build_generic_subcue(lisp_cue, self.scs_cuetype)
-        details = exporter.dom.createElement("AudioFile")
-
-        # @todo:
-        # * lose the file:/// prefix
-        # * change the slashes from `/` to `\`
-        uri = lisp_cue.media.elements.UriInput.uri
-        details.appendChild(exporter.create_text_element("FileName", uri))
-
-        # @todo:
-        # * Use actual device name
-        details.appendChild(exporter.create_text_element("LogicalDev0", "Front"))
-
-        if hasattr(lisp_cue.media.elements, "Volume"):
-            details.appendChild(
-                exporter.create_text_element(
-                    "DBLevel0", linear_to_db(lisp_cue.media.elements.Volume.volume)))
-
-        if hasattr(lisp_cue.media.elements, "AudioPan"):
-            # LiSP pan: -1.0 <-> 1.0
-            # SCS pan: 0 -> 1000
-            details.appendChild(
-                exporter.create_text_element(
-                    "Pan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
-
-        subcue.appendChild(details)
         scs_cue.appendChild(subcue)
         return {
             ExportKeys.Cues: [scs_cue],
-            ExportKeys.Device: self._build_audio_device(exporter, lisp_cue),
+            ExportKeys.Device: (
+                scs_cuetype,
+                self._build_device(scs_cuetype, lisp_cue),
+            )
         }
