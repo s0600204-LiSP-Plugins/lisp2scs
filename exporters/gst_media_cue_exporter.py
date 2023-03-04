@@ -80,6 +80,18 @@ class GstMediaCueExporter:
             details.appendChild(
                 exporter.create_text_element("EndAt", end_time))
 
+        # LiSP: -1 == unlimited loops; 0 == no loop; 1+ == loop count
+        loop_count = lisp_cue.media.loop
+        if loop_count != 0:
+            details.appendChild(
+                exporter.create_text_element("Loop", True))
+            # For some reason, either a Start or End time to the loop must be given.
+            details.appendChild(
+                exporter.create_text_element("LoopStart", 0))
+            if loop_count > 0:
+                details.appendChild(
+                    exporter.create_text_element("NumLoops", loop_count))
+
         scs_subcue.appendChild(details)
 
     def _build_device(self, cue_type, lisp_cue):
@@ -128,6 +140,10 @@ class GstMediaCueExporter:
 
         scs_subcue.appendChild(
             exporter.create_text_element("OutputScreen", 2))
+
+        if lisp_cue.media.loop != 0:
+            scs_subcue.appendChild(
+                exporter.create_text_element("VideoRepeat", True))
 
         scs_subcue.appendChild(
             exporter.create_text_element("VideoLogicalAudioDev", scs_device.name))
