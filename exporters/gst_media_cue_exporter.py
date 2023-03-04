@@ -53,9 +53,10 @@ class GstMediaCueExporter:
         if hasattr(lisp_cue.media.elements, "AudioPan"):
             # LiSP pan: -1.0 <-> 1.0
             # SCS pan: 0 -> 1000
-            details.appendChild(
-                exporter.create_text_element(
-                    "Pan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
+            pan = lisp_cue.media.elements.AudioPan.pan
+            if pan != 0.0:
+                details.appendChild(
+                    exporter.create_text_element("Pan0", int((pan + 1) * 500)))
 
         fadein = lisp_cue.fadein_duration
         if fadein > 0:
@@ -139,8 +140,10 @@ class GstMediaCueExporter:
         if hasattr(lisp_cue.media.elements, "AudioPan"):
             # LiSP pan: -1.0 <-> 1.0
             # SCS pan: 0 -> 1000
-            scs_subcue.appendChild(
-                exporter.create_text_element("SubDBPan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
+            pan = lisp_cue.media.elements.AudioPan.pan
+            if pan != 0.0:
+                scs_subcue.appendChild(
+                    exporter.create_text_element("SubDBPan0", int((pan + 1) * 500)))
 
         fadein = lisp_cue.fadein_duration
         if fadein > 0:
