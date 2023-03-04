@@ -57,6 +57,28 @@ class GstMediaCueExporter:
                 exporter.create_text_element(
                     "Pan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
 
+        fadein = lisp_cue.fadein_duration
+        if fadein > 0:
+            fadein = int(fadein * 1000) # seconds -> milliseconds
+            details.appendChild(
+                exporter.create_text_element("FadeInTime", fadein))
+
+        fadeout = lisp_cue.fadeout_duration
+        if fadeout > 0:
+            fadeout = int(fadeout * 1000) # seconds -> milliseconds
+            details.appendChild(
+                exporter.create_text_element("FadeOutTime", fadeout))
+
+        start_time = lisp_cue.media.start_time
+        if start_time > 0:
+            details.appendChild(
+                exporter.create_text_element("StartAt", start_time))
+
+        end_time = lisp_cue.media.stop_time
+        if end_time > 0:
+            details.appendChild(
+                exporter.create_text_element("EndAt", end_time))
+
         scs_subcue.appendChild(details)
 
     def _build_device(self, cue_type, lisp_cue):
@@ -120,10 +142,32 @@ class GstMediaCueExporter:
             scs_subcue.appendChild(
                 exporter.create_text_element("SubDBPan0", int((lisp_cue.media.elements.AudioPan.pan + 1) * 500)))
 
+        fadein = lisp_cue.fadein_duration
+        if fadein > 0:
+            fadein = int(fadein * 1000) # seconds -> milliseconds
+            scs_subcue.appendChild(
+                exporter.create_text_element("PLFadeInTime", fadein))
+
+        fadeout = lisp_cue.fadeout_duration
+        if fadeout > 0:
+            fadeout = int(fadeout * 1000) # seconds -> milliseconds
+            scs_subcue.appendChild(
+                exporter.create_text_element("PLFadeOutTime", fadeout))
+
         video_file = exporter.dom.createElement("VideoFile")
 
         video_file.appendChild(
             exporter.create_text_element("FileName", self._build_file_path(lisp_cue)))
+
+        start_time = lisp_cue.media.start_time
+        if start_time > 0:
+            video_file.appendChild(
+                exporter.create_text_element("StartAt", start_time))
+
+        end_time = lisp_cue.media.stop_time
+        if end_time > 0:
+            video_file.appendChild(
+                exporter.create_text_element("EndAt", end_time))
 
         scs_subcue.appendChild(video_file)
 
