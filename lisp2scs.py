@@ -34,6 +34,7 @@ from lisp.core.plugin import Plugin
 from lisp.ui.ui_utils import translate
 
 from .exporter import ScsExporter
+from .importer import ScsImporter
 from .util import SCS_FILE_EXT, SCS_XML_INDENT
 
 
@@ -62,6 +63,7 @@ class Lisp2Scs(Plugin):
         self._prod_id = None
 
         self._exporter = None
+        self._importer = None
 
         # Append actions to File menu
         file_menu = self.app.window.menuFile
@@ -70,7 +72,6 @@ class Lisp2Scs(Plugin):
         self.import_action = QAction(self.import_menu)
         self.import_action.triggered.connect(self.import_showfile)
         self.import_menu.addAction(self.import_action)
-        self.import_menu.setEnabled(False)
 
         self.export_menu = QMenu(file_menu)
         self.export_action = QAction(self.export_menu)
@@ -124,8 +125,7 @@ class Lisp2Scs(Plugin):
         return None
 
     def import_showfile(self):
-        pass
-        # check we have interpreters for the showfile's cues
-        # SCS, so:
-        # - always list layout
-        # - only one list
+        if not self._importer:
+            self._importer = ScsImporter(self.app)
+
+        self._importer.import_file()
