@@ -34,7 +34,6 @@ from lisp.core.plugin import Plugin
 from lisp.ui.ui_utils import translate
 
 from .exporter import SCS_XML_INDENT, ScsExporter
-from .exporters import find_exporters
 from .util import SCS_FILE_EXT
 
 
@@ -62,16 +61,7 @@ class Lisp2Scs(Plugin):
         # @todo: Null this on LiSP showfile creation(/loading)
         self._prod_id = None
 
-        # Find exporters (but don't init them)
-        self._exporters = {}
-        for name, exporter in find_exporters():
-            cuetype = exporter.lisp_cuetype
-            if cuetype in self._exporters:
-                logger.warn(f"Already registered an exporter for cue type {cuetype}")
-                continue
-
-            logger.debug(f"Registering exporter for {cuetype}: {name}.")
-            self._exporters[cuetype] = exporter
+        self._exporter = None
 
         # Append actions to File menu
         file_menu = self.app.window.menuFile
@@ -105,21 +95,10 @@ class Lisp2Scs(Plugin):
         if not filename:
             return
 
-        # Get used cue types
-        cuetypes = {cue.__class__.__name__ for cue in self.app.layout.cues()}
+        if not self._exporter:
+            self._exporter = ScsExporter(self.app)
 
-        for cuetype in cuetypes:
-            # Check we have an exporter for each cue type
-            if cuetype not in self._exporters:
-                logger.warning(f"No registered exporter for Cues of type {cuetype}")
-                continue
-
-            # And if we do, initialise an instance of it, if needed
-            if isinstance(self._exporters[cuetype], type):
-                self._exporters[cuetype] = self._exporters[cuetype]()
-
-        exporter = ScsExporter(self.app, self._exporters)
-        document = exporter.export(self._prod_id, self.app.layout.cues())
+        document = self._exporter.export(self._prod_id, self.app.layout.cues())
 
         with open(filename, mode="w", encoding="utf-8") as file:
             file.write(document.toprettyxml(indent=SCS_XML_INDENT))

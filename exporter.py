@@ -6,6 +6,7 @@ from xml.dom.minidom import getDOMImplementation
 from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
+from .exporters import find_exporters
 from .util import ExportKeys, ScsAudioDevice, ScsDeviceType
 
 
@@ -16,19 +17,43 @@ SCS_XML_INDENT = ' ' * 4
 
 class ScsExporter:
 
-    def __init__(self, app, exporters):
+    def __init__(self, app):
 
         self._app = app
         self._impl = getDOMImplementation()
         self._dom = None
         self._prod_id = None
-        self._exporters = exporters
+
+        # Find exporters (but don't init them)
+        self._exporters = {}
+        for name, exporter in find_exporters():
+            cuetype = exporter.lisp_cuetype
+            if cuetype in self._exporters:
+                logger.warn(f"Already registered an exporter for cue type {cuetype}")
+                continue
+
+            logger.debug(f"Registering exporter for {cuetype}: {name}.")
+            self._exporters[cuetype] = exporter
 
     @property
     def dom(self):
         return self._dom
 
     def export(self, prod_id, cues):
+
+        # Get used cue types
+        cuetypes = {cue.__class__.__name__ for cue in self._app.layout.cues()}
+
+        for cuetype in cuetypes:
+            # Check we have an exporter for each cue type
+            if cuetype not in self._exporters:
+                logger.warning(f"No registered exporter for Cues of type {cuetype}")
+                continue
+
+            # And if we do, initialise an instance of it, if needed
+            if isinstance(self._exporters[cuetype], type):
+                self._exporters[cuetype] = self._exporters[cuetype]()
+
         self._prod_id = prod_id
         self._dom = self._impl.createDocument(None, "Production", None)
 
