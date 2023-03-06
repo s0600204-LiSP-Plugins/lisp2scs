@@ -33,8 +33,8 @@ from PyQt5.QtWidgets import (
 from lisp.core.plugin import Plugin
 from lisp.ui.ui_utils import translate
 
-from .exporter import SCS_XML_INDENT, ScsExporter
-from .util import SCS_FILE_EXT
+from .exporter import ScsExporter
+from .util import SCS_FILE_EXT, SCS_XML_INDENT
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name

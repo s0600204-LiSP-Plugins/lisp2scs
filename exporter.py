@@ -7,12 +7,10 @@ from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
 from .exporters import find_exporters
-from .util import ExportKeys, ScsAudioDevice, ScsDeviceType
+from .util import ExportKeys, ScsAudioDevice, ScsDeviceType, SCS_XML_INDENT
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
-
-SCS_XML_INDENT = ' ' * 4
 
 
 class ScsExporter:

@@ -23,3 +23,4 @@ ScsVideoAudioDevice = namedtuple('ScsVideoAudioDevice', ['name'])
 
 SCS_FILE_EXT = '.scs11'
 SCS_FILE_REL_PREFIX = '$(Cue)\\'
+SCS_XML_INDENT = ' ' * 4
