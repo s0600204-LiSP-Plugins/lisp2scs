@@ -84,6 +84,11 @@ class Lisp2Scs(Plugin):
 
         self.retranslateUi()
 
+    def _fileio_startpoint(self):
+        if self.app.session.session_file:
+            return self.app.session.dir()
+        return self.app.conf.get("session.lastPath", os.getenv("HOME"))
+
     def retranslateUi(self):
         self.export_menu.setTitle(translate("Lisp2Scs", "Export"))
         self.export_action.setText(translate("Lisp2Scs", "Show Cue Systems"))
@@ -105,17 +110,23 @@ class Lisp2Scs(Plugin):
             file.write(document.toprettyxml(indent=SCS_XML_INDENT))
 
     def get_export_filename(self):
-        if self.app.session.session_file:
-            directory = self.app.session.dir()
-        else:
-            directory = self.app.conf.get(
-                "session.lastPath",
-                os.getenv("HOME"))
-
         path, _ = QFileDialog.getSaveFileName(
             parent=self.app.window,
             filter=f"*{SCS_FILE_EXT}",
-            directory=directory
+            directory=self._fileio_startpoint()
+        )
+
+        if path:
+            if not path.endswith(SCS_FILE_EXT):
+                path += SCS_FILE_EXT
+            return path
+        return None
+
+    def get_import_filename(self):
+        path, _ = QFileDialog.getOpenFileName(
+            parent=self.app.window,
+            filter=f"*{SCS_FILE_EXT}",
+            directory=self._fileio_startpoint()
         )
 
         if path:
@@ -125,6 +136,8 @@ class Lisp2Scs(Plugin):
         return None
 
     def import_showfile(self):
+        print(self.get_import_filename())
+
         if not self._importer:
             self._importer = ScsImporter(self.app)
 
