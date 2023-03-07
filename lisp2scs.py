@@ -136,9 +136,17 @@ class Lisp2Scs(Plugin):
         return None
 
     def import_showfile(self):
-        print(self.get_import_filename())
+        filename = self.get_import_filename()
+        if not filename:
+            return
 
         if not self._importer:
             self._importer = ScsImporter(self.app)
 
-        self._importer.import_file()
+        with open(filename, mode="r", encoding="utf-8") as file_contents:
+            validated = self._importer.validate_file(file_contents)
+            if not validated:
+                logger.error("Imported file failed validation. See error log for details.")
+                return
+
+            self._importer.import_file(file_contents)
