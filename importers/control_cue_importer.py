@@ -30,5 +30,5 @@ class ControlCueImporter:
     def __init__(self):
         print("Control cue importer init")
 
-    def import_cue(self, exporter, scs_cue):
-        return None
+    def import_cue(self, exporter, scs_cue, scs_subcue):
+        return {}

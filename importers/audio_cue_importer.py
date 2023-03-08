@@ -30,5 +30,5 @@ class AudioCueImporter:
     def __init__(self):
         print("Audio cue importer init")
 
-    def import_cue(self, importer, scs_cue):
-        return None
+    def import_cue(self, importer, scs_cue, scs_subcue):
+        return {}

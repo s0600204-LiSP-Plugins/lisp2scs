@@ -34,9 +34,20 @@ class ScsImporter:
     def import_file(self, file_contents):
         # Obv. can't call it "import" as thats a reserved name.
 
-        # SCS, so:
-        # - always list layout
-        # - only one list
+        dom = xml_parse(file_contents)
+        for cue in dom.getElementsByTagName("Cue"):
+            for subcue in cue.getElementsByTagName("Sub"):
+
+                subtype = self.get_string_value(subcue.getElementsByTagName("SubType")[0])
+
+                # Initialise an instance of the importer if needed
+                if isinstance(self._importers[subtype], type):
+                    self._importers[subtype] = self._importers[subtype]()
+
+                cue_dict = self._importers[subtype].import_cue(self, cue, subcue)
+                lisp_cue = self._app.cue_factory.create_cue(self._importers[subtype].lisp_cuetype)
+                lisp_cue.update_properties(cue_dict)
+                self._app.cue_model.add(lisp_cue)
 
     def validate_file(self, file_contents):
         checked_types = []
