@@ -30,5 +30,5 @@ class VideoCueImporter:
     def __init__(self):
         print("Video cue importer init")
 
-    def import_cue(self, importer, scs_cue):
-        return None
+    def import_cue(self, importer, scs_cue, scs_subcue):
+        return {}

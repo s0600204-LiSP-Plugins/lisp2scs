@@ -136,6 +136,9 @@ class Lisp2Scs(Plugin):
         return None
 
     def import_showfile(self):
+        if not self.app.window.check_session_saved():
+            return
+
         filename = self.get_import_filename()
         if not filename:
             return
@@ -149,4 +152,9 @@ class Lisp2Scs(Plugin):
                 logger.error("Imported file failed validation. See error log for details.")
                 return
 
+        self.app.create_session("ListLayout")
+
+        with open(filename, mode="r", encoding="utf-8") as file_contents:
             self._importer.import_file(file_contents)
+
+        self.app.session_loaded.emit(self.app.session)
