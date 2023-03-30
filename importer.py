@@ -36,6 +36,15 @@ class ScsImporter:
     def cue_model(self):
         return self._app.cue_model
 
+    def get_boolean_value(self, node):
+        return bool(self.get_string_value(node))
+
+    def get_integer_value(self, node):
+        return int(self.get_string_value(node))
+
+    def get_float_value(self, node):
+        return float(self.get_string_value(node))
+
     def get_string_value(self, node):
         return node.childNodes[0].nodeValue
 
