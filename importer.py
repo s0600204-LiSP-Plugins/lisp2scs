@@ -28,6 +28,14 @@ class ScsImporter:
             self._importers[subtype] = importer
             logger.debug(f'Registered importer for SCS Cue SubType "{subtype}": {name}.')
 
+    @property
+    def cue_factory(self):
+        return self._app.cue_factory
+
+    @property
+    def cue_model(self):
+        return self._app.cue_model
+
     def get_string_value(self, node):
         return node.childNodes[0].nodeValue
 
