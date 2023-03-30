@@ -31,4 +31,5 @@ class AudioCueImporter:
         print("Audio cue importer init")
 
     def import_cue(self, importer, scs_cue, scs_subcue):
-        return {}
+        cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
+        return cue_dict

@@ -31,4 +31,5 @@ class ControlCueImporter:
         print("Control cue importer init")
 
     def import_cue(self, exporter, scs_cue, scs_subcue):
-        return {}
+        cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
+        return cue_dict

@@ -36,6 +36,25 @@ class ScsImporter:
     def cue_model(self):
         return self._app.cue_model
 
+    def build_generic_cue(self, scs_cue, scs_subcue):
+        """Creates a new LiSP cue."""
+        cue_dict = {}
+
+        if scs_cue.getElementsByTagName("Sub").length > 1:
+            cue_name = scs_subcue.getElementsByTagName("SubDescription")[0]
+        else:
+            cue_name = scs_cue.getElementsByTagName("Description")[0]
+
+        cue_id = self.get_string_value(scs_cue.getElementsByTagName("CueID")[0])
+        cue_name = self.get_string_value(cue_name)
+        cue_dict["name"] = f"[{cue_id}] {cue_name}"
+
+        whenreqd = scs_cue.getElementsByTagName("WhenReqd")
+        if whenreqd:
+            cue_dict["description"] = self.get_string_value(whenreqd[0])
+
+        return cue_dict
+
     def get_boolean_value(self, node):
         return bool(self.get_string_value(node))
 
