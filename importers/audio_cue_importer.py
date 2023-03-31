@@ -22,6 +22,7 @@
 
 from os import path
 
+from lisp.backend.audio_utils import db_to_linear
 from lisp.plugins import get_plugin
 
 from ..util import SCS_FILE_REL_PREFIX
@@ -36,6 +37,14 @@ class AudioCueImporter:
     def __init__(self):
         print("Audio cue importer init")
 
+    def _build_element_pan(self, importer, scs_subcue):
+        pan = scs_subcue.getElementsByTagName("Pan0")
+        if not pan:
+            return None
+        return {
+            "pan": importer.get_integer_value(pan[0]) / 500 - 1
+        }
+
     def _build_element_uriinput(self, importer, scs_subcue, context):
         file_path = scs_subcue.getElementsByTagName("FileName")[0]
         file_path = importer.get_string_value(file_path)
@@ -44,17 +53,37 @@ class AudioCueImporter:
             "uri": f"file:///{ context['path'] }/{ file_path }",
         }
 
+    def _build_element_volume(self, importer, scs_subcue):
+        level = scs_subcue.getElementsByTagName("DBLevel0")
+        level = importer.get_float_value(level[0]) if level else -3.0
+        return {
+            "volume": db_to_linear(level)
+        }
+
     def import_cue(self, importer, scs_cue, scs_subcue, context):
         cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
-        media_dict = {}
+        elements = {}
+        pipeline = []
 
-        elements = {
-            "UriInput": self._build_element_uriinput(importer, scs_subcue, context),
+        # UriInput
+        pipeline.append("UriInput")
+        elements["UriInput"] = self._build_element_uriinput(importer, scs_subcue, context)
+
+        # Volume
+        pipeline.append("Volume")
+        elements["Volume"] = self._build_element_volume(importer, scs_subcue)
+
+        # Pan
+        pan = self._build_element_pan(importer, scs_subcue)
+        if pan:
+            pipeline.append("AudioPan")
+            elements["AudioPan"] = pan
+
+        # Sink
+        pipeline.append(get_plugin('GstBackend').Config.get("pipeline")[-1])
+
+        cue_dict["media"] = {
+            "elements": elements,
+            "pipe": pipeline,
         }
-        media_dict["elements"] = elements
-
-        pipeline = ["UriInput"] + get_plugin('GstBackend').Config.get("pipeline", [])
-        media_dict["pipe"] = pipeline
-
-        cue_dict["media"] = media_dict
         return cue_dict
