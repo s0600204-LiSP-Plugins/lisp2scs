@@ -60,8 +60,18 @@ class AudioCueImporter:
             "volume": db_to_linear(level)
         }
 
+    def _build_loop_value(self, importer, scs_subcue):
+        looped = scs_subcue.getElementsByTagName("Loop")
+        if not looped or not importer.get_integer_value(looped[0]):
+            return None
+        loop_count = scs_subcue.getElementsByTagName("NumLoops")
+        if not loop_count:
+            return -1
+        return importer.get_integer_value(loop_count[0])
+
     def import_cue(self, importer, scs_cue, scs_subcue, context):
         cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
+        media_dict = {}
         elements = {}
         pipeline = []
 
@@ -82,8 +92,28 @@ class AudioCueImporter:
         # Sink
         pipeline.append(get_plugin('GstBackend').Config.get("pipeline")[-1])
 
-        cue_dict["media"] = {
-            "elements": elements,
-            "pipe": pipeline,
-        }
+        # Start and Stop times
+        start = scs_subcue.getElementsByTagName("StartAt")
+        stop = scs_subcue.getElementsByTagName("EndAt")
+        if start:
+            media_dict["start_time"] = importer.get_integer_value(start[0])
+        if stop:
+            media_dict["stop_time"] = importer.get_integer_value(stop[0])
+
+        # Loop
+        loop = self._build_loop_value(importer, scs_subcue)
+        if loop:
+            media_dict["loop"] = loop
+
+        # Fade In/Out times
+        fade_in = scs_subcue.getElementsByTagName("FadeInTime")
+        fade_out = scs_subcue.getElementsByTagName("FadeOutTime")
+        if fade_in:
+            cue_dict["fadein_duration"] = importer.get_integer_value(fade_in[0]) / 1000
+        if fade_out:
+            cue_dict["fadeout_duration"] = importer.get_integer_value(fade_out[0]) / 1000
+
+        media_dict["elements"] = elements
+        media_dict["pipe"] = pipeline
+        cue_dict["media"] = media_dict
         return cue_dict
