@@ -20,6 +20,12 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
+from os import path
+
+from lisp.plugins import get_plugin
+
+from ..util import SCS_FILE_REL_PREFIX
+
 
 class AudioCueImporter:
 
@@ -30,6 +36,25 @@ class AudioCueImporter:
     def __init__(self):
         print("Audio cue importer init")
 
-    def import_cue(self, importer, scs_cue, scs_subcue):
+    def _build_element_uriinput(self, importer, scs_subcue, context):
+        file_path = scs_subcue.getElementsByTagName("FileName")[0]
+        file_path = importer.get_string_value(file_path)
+        file_path = file_path.replace(SCS_FILE_REL_PREFIX, '', 1)
+        return {
+            "uri": f"file:///{ context['path'] }/{ file_path }",
+        }
+
+    def import_cue(self, importer, scs_cue, scs_subcue, context):
         cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
+        media_dict = {}
+
+        elements = {
+            "UriInput": self._build_element_uriinput(importer, scs_subcue, context),
+        }
+        media_dict["elements"] = elements
+
+        pipeline = ["UriInput"] + get_plugin('GstBackend').Config.get("pipeline", [])
+        media_dict["pipe"] = pipeline
+
+        cue_dict["media"] = media_dict
         return cue_dict

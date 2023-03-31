@@ -155,6 +155,7 @@ class Lisp2Scs(Plugin):
         self.app.create_session("ListLayout")
 
         with open(filename, mode="r", encoding="utf-8") as file_contents:
-            self._importer.import_file(file_contents)
+            file_path = os.path.dirname(filename)
+            self._importer.import_file(file_contents, file_path)
 
         self.app.session_loaded.emit(self.app.session)

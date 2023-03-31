@@ -67,8 +67,11 @@ class ScsImporter:
     def get_string_value(self, node):
         return node.childNodes[0].nodeValue
 
-    def import_file(self, file_contents):
+    def import_file(self, file_contents, file_path):
         # Obv. can't call it "import" as thats a reserved name.
+        context = {
+            "path": file_path,
+        }
 
         dom = xml_parse(file_contents)
         for cue in dom.getElementsByTagName("Cue"):
@@ -80,7 +83,7 @@ class ScsImporter:
                 if isinstance(self._importers[subtype], type):
                     self._importers[subtype] = self._importers[subtype]()
 
-                cue_dict = self._importers[subtype].import_cue(self, cue, subcue)
+                cue_dict = self._importers[subtype].import_cue(self, cue, subcue, context)
                 lisp_cue = self._app.cue_factory.create_cue(self._importers[subtype].lisp_cuetype)
                 lisp_cue.update_properties(cue_dict)
                 self._app.cue_model.add(lisp_cue)
