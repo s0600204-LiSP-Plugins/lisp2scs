@@ -2,10 +2,12 @@
 import logging
 from xml.dom.minidom import parse as xml_parse
 
+from lisp.backend.audio_utils import db_to_linear
 from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
 from .importers import find_importers
+from .util import SCS_FILE_REL_PREFIX
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -16,6 +18,7 @@ class ScsImporter:
     def __init__(self, app):
 
         self._app = app
+        self._imported_file_path = None
 
         # Find importers (but don't init them)
         self._importers = {}
@@ -61,17 +64,37 @@ class ScsImporter:
     def get_integer_value(self, node):
         return int(self.get_string_value(node))
 
+    def get_fileuri_value(self, node, tag_name):
+        file_path = self.get_string_value(node.getElementsByTagName(tag_name)[0])
+        file_path = file_path.replace(SCS_FILE_REL_PREFIX, '', 1)
+        return f"file:///{ self._imported_file_path }/{ file_path }"
+
     def get_float_value(self, node):
         return float(self.get_string_value(node))
+
+    def get_linear_from_db_value(self, node, tag_name):
+        decibel = node.getElementsByTagName(tag_name)
+        decibel = self.get_float_value(decibel[0]) if decibel else -3.0
+        return db_to_linear(decibel)
+
+    def get_pan_value(self, node, tag_name):
+        pan = node.getElementsByTagName(tag_name)
+        if not pan:
+            return 0
+        return self.get_integer_value(pan[0]) / 500 - 1
 
     def get_string_value(self, node):
         return node.childNodes[0].nodeValue
 
+    def get_time_value(self, node, tag_name):
+        time = node.getElementsByTagName(tag_name)
+        if not time:
+            return None
+        return self.get_integer_value(time[0]) / 1000
+
     def import_file(self, file_contents, file_path):
         # Obv. can't call it "import" as thats a reserved name.
-        context = {
-            "path": file_path,
-        }
+        self._imported_file_path = file_path
 
         dom = xml_parse(file_contents)
         for cue in dom.getElementsByTagName("Cue"):
@@ -83,10 +106,12 @@ class ScsImporter:
                 if isinstance(self._importers[subtype], type):
                     self._importers[subtype] = self._importers[subtype]()
 
-                cue_dict = self._importers[subtype].import_cue(self, cue, subcue, context)
+                cue_dict = self._importers[subtype].import_cue(self, cue, subcue)
                 lisp_cue = self._app.cue_factory.create_cue(self._importers[subtype].lisp_cuetype)
                 lisp_cue.update_properties(cue_dict)
                 self._app.cue_model.add(lisp_cue)
+
+        self._imported_file_path = None
 
     def validate_file(self, file_contents):
         checked_types = []

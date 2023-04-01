@@ -20,12 +20,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
-from os import path
-
-from lisp.backend.audio_utils import db_to_linear
 from lisp.plugins import get_plugin
-
-from ..util import SCS_FILE_REL_PREFIX
 
 
 class MediaCueImporter:
@@ -33,30 +28,7 @@ class MediaCueImporter:
     lisp_plugin = "GstBackend"
     lisp_cuetype = "GstMediaCue"
 
-    def _build_element_pan(self, importer, scs_subcue):
-        return {}
-
-    def _build_element_uriinput(self, importer, scs_subcue, context):
-        file_path = scs_subcue.getElementsByTagName("FileName")[0]
-        file_path = importer.get_string_value(file_path)
-        file_path = file_path.replace(SCS_FILE_REL_PREFIX, '', 1)
-        return {
-            "uri": f"file:///{ context['path'] }/{ file_path }",
-        }
-
-    def _build_element_volume(self, importer, scs_subcue):
-        return {}
-
-    def _get_fadein_time(self, importer, scs_subcue):
-        return 0
-
-    def _get_fadeout_time(self, importer, scs_subcue):
-        return 0
-
-    def _get_loop_value(self, *_):
-        return None
-
-    def import_cue(self, importer, scs_cue, scs_subcue, context):
+    def import_cue(self, importer, scs_cue, scs_subcue):
         cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
         media_dict = {}
         elements = {}
@@ -64,17 +36,17 @@ class MediaCueImporter:
 
         # UriInput
         pipeline.append("UriInput")
-        elements["UriInput"] = self._build_element_uriinput(importer, scs_subcue, context)
+        elements["UriInput"] = {
+            "uri": importer.get_fileuri_value(scs_subcue, "FileName")
+        }
 
         # Volume
         pipeline.append("Volume")
         elements["Volume"] = self._build_element_volume(importer, scs_subcue)
 
         # Pan
-        pan = self._build_element_pan(importer, scs_subcue)
-        if pan:
-            pipeline.append("AudioPan")
-            elements["AudioPan"] = pan
+        pipeline.append("AudioPan")
+        elements["AudioPan"] = self._build_element_pan(importer, scs_subcue)
 
         # Sink
         pipeline.append(get_plugin('GstBackend').Config.get("pipeline")[-1])

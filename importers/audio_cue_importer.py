@@ -20,8 +20,6 @@
 # You should have received a copy of the GNU General Public License
 # along with Linux Show Player.  If not, see <http://www.gnu.org/licenses/>.
 
-from lisp.backend.audio_utils import db_to_linear
-
 from ._media_import_common import MediaCueImporter
 
 
@@ -33,31 +31,22 @@ class AudioCueImporter(MediaCueImporter):
         print("Audio cue importer init")
 
     def _build_element_pan(self, importer, scs_subcue):
-        pan = scs_subcue.getElementsByTagName("Pan0")
-        if not pan:
-            return None
         return {
-            "pan": importer.get_integer_value(pan[0]) / 500 - 1
+            "pan": importer.get_pan_value(scs_subcue, "Pan0")
         }
 
     def _build_element_volume(self, importer, scs_subcue):
-        level = scs_subcue.getElementsByTagName("DBLevel0")
-        level = importer.get_float_value(level[0]) if level else -3.0
         return {
-            "volume": db_to_linear(level)
+            "volume": importer.get_linear_from_db_value(scs_subcue, "DBLevel0")
         }
 
     def _get_fadein_time(self, importer, scs_subcue):
-        time = scs_subcue.getElementsByTagName("FadeInTime")
-        if not time:
-            return False
-        return importer.get_integer_value(time[0]) / 1000
+        time = importer.get_time_value(scs_subcue, "FadeInTime")
+        return time if time else None
 
     def _get_fadeout_time(self, importer, scs_subcue):
-        time = scs_subcue.getElementsByTagName("FadeOutTime")
-        if not time:
-            return False
-        return importer.get_integer_value(time[0]) / 1000
+        time = importer.get_time_value(scs_subcue, "FadeOutTime")
+        return time if time else None
 
     def _get_loop_value(self, importer, scs_subcue):
         looped = scs_subcue.getElementsByTagName("Loop")
