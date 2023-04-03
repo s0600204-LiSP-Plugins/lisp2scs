@@ -44,53 +44,63 @@ class ScsImporter:
         cue_dict = {}
 
         if scs_cue.getElementsByTagName("Sub").length > 1:
-            cue_name = scs_subcue.getElementsByTagName("SubDescription")[0]
+            cue_name = self.get_string_value(scs_subcue, "SubDescription")
         else:
-            cue_name = scs_cue.getElementsByTagName("Description")[0]
+            cue_name = self.get_string_value(scs_cue, "Description")
 
-        cue_id = self.get_string_value(scs_cue.getElementsByTagName("CueID")[0])
-        cue_name = self.get_string_value(cue_name)
+        cue_id = self.get_string_value(scs_cue, "CueID")
         cue_dict["name"] = f"[{cue_id}] {cue_name}"
 
-        whenreqd = scs_cue.getElementsByTagName("WhenReqd")
+        whenreqd = self.get_string_value(scs_cue, "WhenReqd")
         if whenreqd:
-            cue_dict["description"] = self.get_string_value(whenreqd[0])
+            cue_dict["description"] = whenreqd
 
         return cue_dict
 
-    def get_boolean_value(self, node):
-        return bool(self.get_string_value(node))
+    def get_boolean_value(self, node, tag_name):
+        value = self.get_string_value(node, tag_name)
+        if value is None:
+            return None
+        return bool(node)
 
-    def get_integer_value(self, node):
-        return int(self.get_string_value(node))
+    def get_integer_value(self, node, tag_name):
+        value = self.get_string_value(node, tag_name)
+        if value is None:
+            return None
+        return int(value)
 
     def get_fileuri_value(self, node, tag_name):
-        file_path = self.get_string_value(node.getElementsByTagName(tag_name)[0])
+        file_path = self.get_string_value(node, tag_name)
+        if file_path is None:
+            return None
         file_path = file_path.replace(SCS_FILE_REL_PREFIX, '', 1)
         return f"file:///{ self._imported_file_path }/{ file_path }"
 
-    def get_float_value(self, node):
-        return float(self.get_string_value(node))
+    def get_float_value(self, node, tag_name):
+        value = self.get_string_value(node, tag_name)
+        if value is None:
+            return None
+        return float(value)
 
     def get_linear_from_db_value(self, node, tag_name):
-        decibel = node.getElementsByTagName(tag_name)
-        decibel = self.get_float_value(decibel[0]) if decibel else -3.0
-        return db_to_linear(decibel)
+        decibel = self.get_float_value(node, tag_name)
+        return db_to_linear(-3.0 if decibel is None else decibel)
 
     def get_pan_value(self, node, tag_name):
-        pan = node.getElementsByTagName(tag_name)
-        if not pan:
+        pan = self.get_integer_value(node, tag_name)
+        if pan is None:
             return 0
-        return self.get_integer_value(pan[0]) / 500 - 1
+        return pan / 500 - 1
 
-    def get_string_value(self, node):
-        return node.childNodes[0].nodeValue
+    def get_string_value(self, node, tag_name):
+        elems = node.getElementsByTagName(tag_name)
+        return elems[0].childNodes[0].nodeValue if elems else None
 
     def get_time_value(self, node, tag_name):
-        time = node.getElementsByTagName(tag_name)
-        if not time:
+        time = self.get_integer_value(node, tag_name)
+        if time is None:
             return None
-        return self.get_integer_value(time[0]) / 1000
+        return time / 1000
 
     def import_file(self, file_contents, file_path):
         # Obv. can't call it "import" as thats a reserved name.
@@ -100,7 +110,7 @@ class ScsImporter:
         for cue in dom.getElementsByTagName("Cue"):
             for subcue in cue.getElementsByTagName("Sub"):
 
-                subtype = self.get_string_value(subcue.getElementsByTagName("SubType")[0])
+                subtype = self.get_string_value(subcue, "SubType")
 
                 # Initialise an instance of the importer if needed
                 if isinstance(self._importers[subtype], type):
@@ -119,7 +129,7 @@ class ScsImporter:
         validation_passed = True
 
         for subcue in dom.getElementsByTagName("Sub"):
-            subtype = self.get_string_value(subcue.getElementsByTagName("SubType")[0])
+            subtype = self.get_string_value(subcue, "SubType")
 
             if subtype in checked_types:
                 continue

@@ -52,12 +52,12 @@ class MediaCueImporter:
         pipeline.append(get_plugin('GstBackend').Config.get("pipeline")[-1])
 
         # Start and Stop times
-        start = scs_subcue.getElementsByTagName("StartAt")
-        stop = scs_subcue.getElementsByTagName("EndAt")
-        if start:
-            media_dict["start_time"] = importer.get_integer_value(start[0])
-        if stop:
-            media_dict["stop_time"] = importer.get_integer_value(stop[0])
+        start = importer.get_integer_value(scs_subcue, "StartAt")
+        stop = importer.get_integer_value(scs_subcue, "EndAt")
+        if start is not None:
+            media_dict["start_time"] = start
+        if stop is not None:
+            media_dict["stop_time"] = stop
 
         # Loop
         loop = self._get_loop_value(importer, scs_subcue)

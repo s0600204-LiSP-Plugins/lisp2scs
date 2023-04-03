@@ -49,7 +49,4 @@ class VideoCueImporter(MediaCueImporter):
         return time if time else None
 
     def _get_loop_value(self, importer, scs_subcue):
-        looped = scs_subcue.getElementsByTagName("VideoRepeat")
-        if looped and importer.get_integer_value(looped[0]) == 1:
-            return -1
-        return 0
+        return -1 if importer.get_boolean_value(scs_subcue, "VideoRepeat") else 0

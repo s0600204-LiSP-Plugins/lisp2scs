@@ -49,10 +49,8 @@ class AudioCueImporter(MediaCueImporter):
         return time if time else None
 
     def _get_loop_value(self, importer, scs_subcue):
-        looped = scs_subcue.getElementsByTagName("Loop")
-        if not looped or not importer.get_integer_value(looped[0]):
+        looped = importer.get_boolean_value(scs_subcue, "Loop")
+        if not looped:
             return None
-        loop_count = scs_subcue.getElementsByTagName("NumLoops")
-        if not loop_count:
-            return -1
-        return importer.get_integer_value(loop_count[0])
+        loop_count = importer.get_integer_value(scs_subcue, "NumLoops")
+        return -1 if loop_count is None else loop_count
