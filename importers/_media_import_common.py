@@ -75,4 +75,4 @@ class MediaCueImporter:
         media_dict["elements"] = elements
         media_dict["pipe"] = pipeline
         cue_dict["media"] = media_dict
-        return cue_dict
+        yield cue_dict

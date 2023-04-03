@@ -32,4 +32,4 @@ class ControlCueImporter:
 
     def import_cue(self, importer, scs_cue, scs_subcue, context):
         cue_dict = importer.build_generic_cue(scs_cue, scs_subcue)
-        return cue_dict
+        yield cue_dict

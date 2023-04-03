@@ -116,10 +116,10 @@ class ScsImporter:
                 if isinstance(self._importers[subtype], type):
                     self._importers[subtype] = self._importers[subtype]()
 
-                cue_dict = self._importers[subtype].import_cue(self, cue, subcue)
-                lisp_cue = self._app.cue_factory.create_cue(self._importers[subtype].lisp_cuetype)
-                lisp_cue.update_properties(cue_dict)
-                self._app.cue_model.add(lisp_cue)
+                for cue_dict in self._importers[subtype].import_cue(self, cue, subcue):
+                    lisp_cue = self._app.cue_factory.create_cue(self._importers[subtype].lisp_cuetype)
+                    lisp_cue.update_properties(cue_dict)
+                    self._app.cue_model.add(lisp_cue)
 
         self._imported_file_path = None
 
