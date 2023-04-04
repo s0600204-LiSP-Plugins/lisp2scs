@@ -29,16 +29,26 @@ except ImportError:
 
 
 # If None, then it needs to be translated from FREE
-MESSAGE_TYPES = {
+MESSAGE_TYPE_MAPPING = {
     "CC": "control_change",
     "FREE": None,
-    "MSC": None,
+    # ~ "MSC": None, # LiSP doesn't support MSC - or raw SYSEX - so this cannot be supported
     "OFF": "note_off",
     "ON": "note_on",
     "PC127": "program_change",
     "PC128": "program_change",
 }
 
+MESSAGE_FREE_MAPPING = {
+    "A": "polytouch",
+    "D": "aftertouch",
+    "E": "pitchwheel",
+    "F2": "songpos",
+    "F3": "song_select",
+    "FA": "start",
+    "FB": "continue",
+    "FC": "stop",
+}
 
 class ControlCueImporter:
 
@@ -57,17 +67,13 @@ class ControlCueImporter:
 
         for message in scs_subcue.getElementsByTagName("ControlMessage"):
             scs_type = importer.get_string_value(message, "MSMsgType")
-            if scs_type not in MESSAGE_TYPES:
+            if scs_type not in MESSAGE_TYPE_MAPPING:
                 print(f"SCS Midi Message {scs_type} needs support")
                 continue
 
             lisp_midi = {
-                "type": MESSAGE_TYPES[scs_type],
+                "type": MESSAGE_TYPE_MAPPING[scs_type],
             }
-            if lisp_midi["type"] is None:
-                print(f"SCS Midi Message {scs_type} needs decoding from FREE")
-                continue
-
             if scs_type not in ["FREE", "MSC"]:
                 lisp_midi["channel"] = importer.get_integer_value(message, "MSChannel") - 1
 
@@ -80,6 +86,30 @@ class ControlCueImporter:
             elif scs_type in ["PC127", "PC128"]:
                 lisp_midi["program"] = importer.get_integer_value(message, "MSParam1")
                 lisp_midi["program"] -= 1 if scs_type == "PC128" else 0
+            else:
+                data = importer.get_string_value(message, "MIDIData").replace(" ", "")
+                msg_type = data[0:1]
+                if msg_type == "F":
+                    msg_type = data[0:2]
+                else:
+                    lisp_midi["channel"] = int(data[1:2], 16)
+
+                if msg_type not in MESSAGE_FREE_MAPPING:
+                    print(f"SCS MIDI FREE needs supporting :: {data}")
+                    continue
+
+                lisp_midi["type"] = MESSAGE_FREE_MAPPING[msg_type]
+                if msg_type == "A":
+                    lisp_midi["note"] = int(data[2:4], 16)
+                    lisp_midi["value"] = int(data[4:6], 16)
+                elif msg_type == "D":
+                    lisp_midi["value"] = int(data[2:4], 16)
+                elif msg_type == "E":
+                    lisp_midi["pitch"] = int(data[2:6], 16)
+                elif msg_type == "F2":
+                    lisp_midi["pos"] = int(data[2:6], 16)
+                elif msg_type == "F3":
+                    lisp_midi["song"] = int(data[2:4], 16)
 
             message_dict = copy.deepcopy(cue_dict)
             message_dict["message"] = midi_dict_to_str(lisp_midi)
