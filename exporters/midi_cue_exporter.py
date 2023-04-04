@@ -28,19 +28,23 @@ except ImportError:
 from ..util import ExportKeys, ScsDeviceType, ScsMidiDevice
 
 
-MESSAGE_TYPES = {
+# Some messages can be converted directly to SCS equivalents...
+MESSAGE_TYPE_MAPPING = {
     "note_on": "ON",
     "note_off": "OFF",
-    "polytouch": None,
     "control_change": "CC",
     "program_change": "PC127",
-    "aftertouch": None,
-    "pitchwheel": None,
-    "song_select": None,
-    "songpos": None,
-    "start": None,
-    "stop": None,
-    "continue": None,
+}
+# ...and others need to be mapped to FREE
+MESSAGE_FREE_MAPPING = {
+    "polytouch": "A{channel:X} {note:02X} {value:02X}",
+    "aftertouch": "D{channel:X} {value:02X}",
+    "pitchwheel": "E{channel:X} {pitch:04X}",
+    "song_select": "F3 {song:02X}",
+    "songpos": "F2 {pos:04X}",
+    "start": "FA",
+    "stop": "FC",
+    "continue": "FB",
 }
 
 
@@ -64,14 +68,13 @@ class MidiCueExporter:
         message = lisp_cue.properties()['message']
         if message:
             message = midi_str_to_dict(message)
-            scs_type = MESSAGE_TYPES[message['type']]
 
-            if not scs_type:
-                # @todo:
-                # * Implement the missing types (which will all need building as FREE)
-                print(f"message type '{ message['type'] }' needs implementing")
-                return []
+            lisp_type = message['type']
+            if lisp_type not in MESSAGE_TYPE_MAPPING and lisp_type not in MESSAGE_FREE_MAPPING:
+                print(f"Unrecognized MIDI message type '{ lisp_type }'")
+                return None
 
+            scs_type = MESSAGE_TYPE_MAPPING.get(lisp_type, "FREE")
             details.appendChild(exporter.create_text_element("MSMsgType", scs_type))
 
             if scs_type not in ["MSC", "FREE"]:
@@ -88,6 +91,11 @@ class MidiCueExporter:
                 details.appendChild(exporter.create_text_element("MSParam2", message['velocity']))
             elif scs_type == "PC127":
                 details.appendChild(exporter.create_text_element("MSParam1", message['program']))
+            else:
+                details.appendChild(
+                    exporter.create_text_element(
+                        "MIDIData",
+                        MESSAGE_FREE_MAPPING[lisp_type].format(**message)))
 
         subcue.appendChild(details)
         scs_cue.appendChild(subcue)

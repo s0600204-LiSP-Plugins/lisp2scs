@@ -68,6 +68,9 @@ class ScsExporter:
                 continue
 
             exported = self._exporters[cue_type].export_cue(self, lisp_cue)
+            if not exported:
+                logger.warning(f"{cue_type} '{lisp_cue.name}' not exported.")
+                continue
 
             for scs_cue in exported[ExportKeys.Cues]:
                 document.appendChild(scs_cue)
