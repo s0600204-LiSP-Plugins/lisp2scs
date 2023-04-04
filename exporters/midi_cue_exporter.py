@@ -35,7 +35,7 @@ MESSAGE_TYPES = {
     "control_change": "CC",
     "program_change": "PC127",
     "aftertouch": None,
-    "pitchwheel": "CC",
+    "pitchwheel": None,
     "song_select": None,
     "songpos": None,
     "start": None,
@@ -86,6 +86,8 @@ class MidiCueExporter:
             elif scs_type in ["ON", "OFF"]:
                 details.appendChild(exporter.create_text_element("MSParam1", message['note']))
                 details.appendChild(exporter.create_text_element("MSParam2", message['velocity']))
+            elif scs_type == "PC127":
+                details.appendChild(exporter.create_text_element("MSParam1", message['program']))
 
         subcue.appendChild(details)
         scs_cue.appendChild(subcue)
