@@ -7,6 +7,8 @@ if not hasattr(enum, 'StrEnum'):
         @staticmethod
         def _generate_next_value_(name, *_):
             return name.lower()
+else:
+    from enum import StrEnum
 
 class ExportKeys(StrEnum):
     Cues = enum.auto()
