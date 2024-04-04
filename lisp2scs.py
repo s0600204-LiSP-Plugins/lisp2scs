@@ -153,6 +153,8 @@ class Lisp2Scs(Plugin):
                 return
 
         self.app.create_session("ListLayout")
+        if hasattr(self.app, "session_initialised"):
+            self.app.session_initialised.emit(self.app.session)
 
         with open(filename, mode="r", encoding="utf-8") as file_contents:
             file_path = os.path.dirname(filename)
