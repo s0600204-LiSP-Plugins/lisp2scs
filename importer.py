@@ -51,7 +51,7 @@ class ScsImporter:
         cue_id = self.get_string_value(scs_cue, "CueID")
         cue_dict["name"] = f"[{cue_id}] {cue_name}"
 
-        whenreqd = self.get_string_value(scs_cue, "WhenReqd")
+        whenreqd = self.get_string_value(scs_cue, "WhenReqd").replace("\n", "\n\n")
         if whenreqd:
             cue_dict["description"] = whenreqd
 

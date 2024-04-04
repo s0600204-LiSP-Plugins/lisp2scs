@@ -314,7 +314,8 @@ class ScsExporter:
         scs_cue.appendChild(self.create_text_element("CueID", lisp_cue.index + 1))
         scs_cue.appendChild(self.create_text_element("Description", lisp_cue.name))
         if lisp_cue.description:
-            scs_cue.appendChild(self.create_text_element("WhenReqd", lisp_cue.description))
+            scs_cue.appendChild(
+                self.create_text_element("WhenReqd", lisp_cue.description.replace("\n\n", "\n")))
         return scs_cue
 
     def build_generic_subcue(self, lisp_cue, scs_cuetype):
