@@ -7,7 +7,7 @@ from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
 from .importers import find_importers
-from .util import SCS_FILE_REL_PREFIX
+from .util import CUEID_MARKUP_PREFIX, CUEID_MARKUP_SUFFIX, SCS_FILE_REL_PREFIX
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -49,7 +49,8 @@ class ScsImporter:
             cue_name = self.get_string_value(scs_cue, "Description")
 
         cue_id = self.get_string_value(scs_cue, "CueID")
-        cue_dict["name"] = f"[{cue_id}] {cue_name}"
+        # See comment for CUEID_MARKUP_PREFIX in util.py
+        cue_dict["name"] = f"{CUEID_MARKUP_PREFIX}{cue_id}{CUEID_MARKUP_SUFFIX} {cue_name}"
 
         whenreqd = self.get_string_value(scs_cue, "WhenReqd").replace("\n", "\n\n")
         if whenreqd:

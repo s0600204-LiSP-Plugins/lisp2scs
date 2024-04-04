@@ -7,7 +7,7 @@ from lisp.core.plugin import PluginNotLoadedError
 from lisp.plugins import get_plugin
 
 from .exporters import find_exporters
-from .util import ExportKeys, ScsAudioDevice, ScsDeviceType, SCS_XML_INDENT
+from .util import CUEID_MARKUP_PREFIX, CUEID_MARKUP_SUFFIX, ExportKeys, ScsAudioDevice, ScsDeviceType, SCS_XML_INDENT
 
 
 logger = logging.getLogger(__name__) # pylint: disable=invalid-name
@@ -36,6 +36,20 @@ class ScsExporter:
     @property
     def dom(self):
         return self._dom
+
+    def _split_cue_name(self, lisp_cue):
+        """
+        See comment for CUEID_MARKUP_PREFIX in util.py
+        """
+        cue_id = lisp_cue.index + 1
+        cue_name = lisp_cue.name
+        if cue_name.startswith(CUEID_MARKUP_PREFIX):
+            cue_name_split = cue_name[len(CUEID_MARKUP_PREFIX):].split(CUEID_MARKUP_SUFFIX, 1)
+            if len(cue_name_split) == 2:
+                    cue_name = cue_name_split[1]
+                    if cue_name_split[0].isalnum():
+                        cue_id = cue_name_split[0]
+        return cue_id, cue_name
 
     def export(self, prod_id, cues):
 
@@ -311,8 +325,9 @@ class ScsExporter:
                 AutoActivateTime    integer     <milliseconds>
         """
         scs_cue = self._dom.createElement("Cue")
-        scs_cue.appendChild(self.create_text_element("CueID", lisp_cue.index + 1))
-        scs_cue.appendChild(self.create_text_element("Description", lisp_cue.name))
+        cue_id, cue_name = self._split_cue_name(lisp_cue)
+        scs_cue.appendChild(self.create_text_element("CueID", cue_id))
+        scs_cue.appendChild(self.create_text_element("Description", cue_name))
         if lisp_cue.description:
             scs_cue.appendChild(
                 self.create_text_element("WhenReqd", lisp_cue.description.replace("\n\n", "\n")))
@@ -336,9 +351,10 @@ class ScsExporter:
                 RelStartMode    enum        "ae_prev_sub" | "as_cue" | "as_prev_sub"
                 RelStartTime    integer     <milliseconds>
         """
+        _, cue_name = self._split_cue_name(lisp_cue)
         scs_subcue = self._dom.createElement("Sub")
         scs_subcue.appendChild(self.create_text_element("SubType", scs_cuetype))
-        scs_subcue.appendChild(self.create_text_element("SubDescription", lisp_cue.name))
+        scs_subcue.appendChild(self.create_text_element("SubDescription", cue_name))
         return scs_subcue
 
     def build_production_head(self, devices):
